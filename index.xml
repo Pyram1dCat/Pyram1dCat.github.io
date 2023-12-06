@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Pyram1dCat 的博客</title>
+        <link>https://example.com/</link>
+        <description>Recent content on Pyram1dCat 的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>Pyram1dCat</copyright>
+        <lastBuildDate>Wed, 06 Dec 2023 09:56:17 +0800</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>发布测试</title>
+        <link>https://example.com/p/init_test/</link>
+        <pubDate>Wed, 06 Dec 2023 09:56:17 +0800</pubDate>
+        
+        <guid>https://example.com/p/init_test/</guid>
+        <description>&lt;p&gt;测试发布第一篇文章。
+&lt;br&gt;
+想做一些自定义，但发觉无从下手处处碰壁。
+&lt;br&gt;
+可能需要先去学一学 Go 语言，弄清楚 Hugo 的运行逻辑。但这个又极其耗时间，所以考虑放到周末抽一点时间去做。
+&lt;br&gt;
+这个 stack 主题本身的用法我暂时也不太明白，不过我觉得就目前来说，会用写文章时用到的语法就可以了。
+&lt;br&gt;
+还有其他知识要学，但时间总是不够。很麻。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>归档</title>
+        <link>https://example.com/archives/</link>
+        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/archives/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>关于</title>
+        <link>https://example.com/%E5%85%B3%E4%BA%8E/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/%E5%85%B3%E4%BA%8E/</guid>
+        <description>&lt;p&gt;药学硕士在读，但马上要因为太菜而没学上了。&amp;#x1f62d;
+&lt;br&gt;
+在全力减肥，在努力不丧，在尽力活着。&amp;#x1f60e;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>搜索</title>
+        <link>https://example.com/search/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/search/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>
