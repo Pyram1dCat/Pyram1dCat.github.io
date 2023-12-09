@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>📦 杂项 on Pyram1dCat 的博客</title>
+        <link>https://example.com/categories/misc/</link>
+        <description>Recent content in 📦 杂项 on Pyram1dCat 的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>Pyram1dCat</copyright>
+        <lastBuildDate>Wed, 06 Dec 2023 09:56:17 +0800</lastBuildDate><atom:link href="https://example.com/categories/misc/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>发布测试</title>
+        <link>https://example.com/p/init_test/</link>
+        <pubDate>Wed, 06 Dec 2023 09:56:17 +0800</pubDate>
+        
+        <guid>https://example.com/p/init_test/</guid>
+        <description>&lt;p&gt;测试发布第一篇文章。
+&lt;br&gt;
+想做一些自定义，但发觉无从下手处处碰壁。
+&lt;br&gt;
+可能需要先去学一学 Go 语言，弄清楚 Hugo 的运行逻辑。但这个又极其耗时间，所以考虑放到周末抽一点时间去做。
+&lt;br&gt;
+这个 stack 主题本身的用法我暂时也不太明白，不过我觉得就目前来说，会用写文章时用到的语法就可以了。
+&lt;br&gt;
+还有其他知识要学，但时间总是不够。很麻。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
