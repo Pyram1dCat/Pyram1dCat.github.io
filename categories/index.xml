@@ -7,13 +7,13 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Pyram1dCat</copyright>
-        <lastBuildDate>Wed, 06 Dec 2023 09:56:17 +0800</lastBuildDate><atom:link href="https://pyram1dcat.site/categories/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>📦 杂项</title>
-        <link>https://pyram1dcat.site/categories/misc/</link>
-        <pubDate>Wed, 06 Dec 2023 09:56:17 +0800</pubDate>
+        <lastBuildDate>Sun, 07 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://pyram1dcat.site/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>🚃 旅和游</title>
+        <link>https://pyram1dcat.site/categories/travel/</link>
+        <pubDate>Sun, 07 Jan 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://pyram1dcat.site/categories/misc/</guid>
-        <description>&lt;img src="https://pyram1dcat.site/categories/misc/misc_img.jpg" alt="Featured image of post 📦 杂项" /&gt;</description>
+        <guid>https://pyram1dcat.site/categories/travel/</guid>
+        <description>&lt;img src="https://pyram1dcat.site/categories/travel/travel_img.jpg" alt="Featured image of post 🚃 旅和游" /&gt;</description>
         </item>
         <item>
         <title>✒️ 摘抄本</title>
@@ -48,12 +48,12 @@
         <description>&lt;img src="https://pyram1dcat.site/categories/thoughts/thoughts_img.jpg" alt="Featured image of post 💭 胡思乱想" /&gt;</description>
         </item>
         <item>
-        <title>🚃 旅和游</title>
-        <link>https://pyram1dcat.site/categories/travel/</link>
+        <title>📦 杂项</title>
+        <link>https://pyram1dcat.site/categories/misc/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://pyram1dcat.site/categories/travel/</guid>
-        <description>&lt;img src="https://pyram1dcat.site/categories/travel/travel_img.jpg" alt="Featured image of post 🚃 旅和游" /&gt;</description>
+        <guid>https://pyram1dcat.site/categories/misc/</guid>
+        <description>&lt;img src="https://pyram1dcat.site/categories/misc/misc_img.jpg" alt="Featured image of post 📦 杂项" /&gt;</description>
         </item>
         
     </channel>
