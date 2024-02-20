@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Categories on Pyram1dCat 的博客</title>
+        <link>https://pyram1dcat.site/categories/</link>
+        <description>Recent content in Categories on Pyram1dCat 的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>Pyram1dCat</copyright>
+        <lastBuildDate>Tue, 20 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://pyram1dcat.site/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>👓 观阅闻后感</title>
+        <link>https://pyram1dcat.site/categories/reports/</link>
+        <pubDate>Tue, 20 Feb 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://pyram1dcat.site/categories/reports/</guid>
+        <description>&lt;img src="https://pyram1dcat.site/categories/reports/reports_img.jpg" alt="Featured image of post 👓 观阅闻后感" /&gt;</description>
+        </item>
+        <item>
+        <title>💭 胡思乱想</title>
+        <link>https://pyram1dcat.site/categories/thoughts/</link>
+        <pubDate>Mon, 19 Feb 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://pyram1dcat.site/categories/thoughts/</guid>
+        <description>&lt;img src="https://pyram1dcat.site/categories/thoughts/thoughts_img.jpg" alt="Featured image of post 💭 胡思乱想" /&gt;</description>
+        </item>
+        <item>
+        <title>✒️ 摘抄本</title>
+        <link>https://pyram1dcat.site/categories/extract/</link>
+        <pubDate>Sun, 18 Feb 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://pyram1dcat.site/categories/extract/</guid>
+        <description>&lt;img src="https://pyram1dcat.site/categories/extract/extract_img.jpg" alt="Featured image of post ✒️ 摘抄本" /&gt;</description>
+        </item>
+        <item>
+        <title>💡 知识库</title>
+        <link>https://pyram1dcat.site/categories/learning/</link>
+        <pubDate>Mon, 05 Feb 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://pyram1dcat.site/categories/learning/</guid>
+        <description>&lt;img src="https://pyram1dcat.site/categories/learning/learning_img.jpg" alt="Featured image of post 💡 知识库" /&gt;</description>
+        </item>
+        <item>
+        <title>🚃 旅和游</title>
+        <link>https://pyram1dcat.site/categories/travel/</link>
+        <pubDate>Sun, 07 Jan 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://pyram1dcat.site/categories/travel/</guid>
+        <description>&lt;img src="https://pyram1dcat.site/categories/travel/travel_img.jpg" alt="Featured image of post 🚃 旅和游" /&gt;</description>
+        </item>
+        <item>
+        <title>📦 杂项</title>
+        <link>https://pyram1dcat.site/categories/misc/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://pyram1dcat.site/categories/misc/</guid>
+        <description>&lt;img src="https://pyram1dcat.site/categories/misc/misc_img.jpg" alt="Featured image of post 📦 杂项" /&gt;</description>
+        </item>
+        
+    </channel>
+</rss>
