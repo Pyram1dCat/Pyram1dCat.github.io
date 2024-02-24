@@ -384,7 +384,7 @@
 </g>
 </svg>
             <time class="article-time--reading">
-                <span class="post-word-count">10586 字</span>
+                <span class="post-word-count">10601 字</span>
             </time>
         </div>
 
@@ -432,7 +432,7 @@
 <p>第一块是启动学习项目前的准备。一方面需要弄清楚学什么，即“<strong>元学习</strong>”，另一方面确定了学习的过程中需要<strong>专心</strong>。同时需要注意贯穿整个学习过程的一个点，即学习要看成自发的一项活动，而不是外部强加的内容，从而减轻或消除痛苦感，提高效率。</p>
 <p>第二块是学习项目过程中的一些方法。通过查看结合实际应用会涉及到的内容来<strong>直接</strong>学习项目的核心，在这个过程中通过<strong>训练</strong>薄弱项来提高表现，同时一方面通过闭卷自由联想的方式来<strong>检索</strong>脑袋里的知识，对自己进行检测，另一方面勇于寻求直接、有效的强<strong>反馈</strong>来校正自己的学习内容和路线。</p>
 <p>第三块是对项目过程中学习效果的说明。最单一的效果即为<strong>记忆</strong>，但这往往不够，还需要更深刻的理解来建立对知识的敏感度和熟悉度，也即培养一种对知识的<strong>直觉</strong>，最后如果想发掘出适合自己的方法、技巧等，还需要积极地进行<strong>试验</strong>，包括对前面提到的所有内容进行试验，由此形成闭环。</p>
-<p>书中的理论和方法都不错，合起来用拆开来用都能有所裨益，但也要注意不能陷入教条主义，需要结合自己和项目的实际。最理想的状态是成为一个自主、灵活、高效的学习者。</p>
+<p>书中的理论和方法都不错，合起来用拆开来用都能有所裨益，但也要注意不能陷入教条主义，需要结合自己和项目的实际，不断熟练之后形成一种“直觉”。最理想的状态是成为一个自主、灵活、高效的学习者。</p>
 <hr>
 <p>* (#数字) 代表引用的（电子书的）位置。<br></p>
 <h2 id="原则一元学习">原则一：元学习</h2>
@@ -899,6 +899,8 @@
     #back2topBtn {
       display: none;
       position: fixed;
+      width: 50px;
+      height: auto;
       bottom: 14px;
       right: 30px;
       z-index: 99;
@@ -907,27 +909,57 @@
       background-color: #ff8c3578;
       color: white;
       cursor: pointer;
-      padding: 15px;
+      padding: 7px;
       border-radius: 10px;
       backdrop-filter: blur(1px);
+      transition: .5s;
+
+       
+       
     }
     
     #back2topBtn:hover {
-      background-color: #555;
+      background-color: #8f8f8f56;
+       
     }
+
+     
     </style>
 
-<button onclick="topFunction()" id="back2topBtn" title="回顶部">返回顶部</button>
+<button onclick="topFunction()" id="back2topBtn" title="回顶部">
+    
+    
+    <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+    "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+    <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+    width="23.000000pt" height="23.000000pt" viewBox="0 0 214.000000 191.000000"
+    preserveAspectRatio="xMidYMid meet">
+        <g transform="translate(0.000000,191.000000) scale(0.100000,-0.100000)"
+        fill="#ffffff" stroke="none">
+            <path d="M540 1375 l-525 -525 288 0 287 0 0 -425 0 -425 480 0 480 0 0 425 0
+            425 287 0 288 0 -525 525 c-289 289 -527 525 -530 525 -3 0 -241 -236 -530
+            -525z m832 -32 c164 -164 298 -301 298 -305 0 -5 -70 -8 -155 -8 l-155 0 0
+            -420 0 -420 -290 0 -290 0 0 420 0 420 -155 0 c-85 0 -155 3 -155 7 0 9 592
+            603 600 603 3 0 139 -134 302 -297z"/>
+        </g>
+    </svg>
+</button>
 <script>
     
     window.onscroll = function() {scrollFunction()};
     
     function scrollFunction() {console.log(121);
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        
+        if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+            console.log('toggle true');
             document.getElementById("back2topBtn").style.display = "block";
         } else {
             document.getElementById("back2topBtn").style.display = "none";
         }
+        
+        
+        
+        
     }
     
     
