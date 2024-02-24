@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='机械工业出版社华章分社（电子书）2022 版，加拿大，斯科特·H. 杨（Scott H. Young）著，姚育红 译 总评 这本书是最早在 B 站上看到有人做英'>
+<title>《超级学习者》笔记</title>
+
+<link rel='canonical' href='https://pyram1dcat.site/p/240224a/'>
+
+<link rel="stylesheet" href="/scss/style.min.c665ac7544dec54f4d005fcf8dfd461ca9b8cf022926cc27d5322829722292ad.css"><meta property='og:title' content='《超级学习者》笔记'>
+<meta property='og:description' content='机械工业出版社华章分社（电子书）2022 版，加拿大，斯科特·H. 杨（Scott H. Young）著，姚育红 译 总评 这本书是最早在 B 站上看到有人做英'>
+<meta property='og:url' content='https://pyram1dcat.site/p/240224a/'>
+<meta property='og:site_name' content='Pyram1dCat 的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='书' /><meta property='article:published_time' content='2024-02-24T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-02-24T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="《超级学习者》笔记">
+<meta name="twitter:description" content="机械工业出版社华章分社（电子书）2022 版，加拿大，斯科特·H. 杨（Scott H. Young）著，姚育红 译 总评 这本书是最早在 B 站上看到有人做英">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0N60FENKE7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-0N60FENKE7');
+  </script>
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_huba79607668e9cfd15cd663e44423ba66_52699_300x0_resize_q75_box.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Pyram1dCat 的博客</a></h1>
+            <h2 class="site-description">一只受观察影响显著的猫</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/Pyram1dCat'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='mailto:suspectf@sjtu.edu.cn'
+                        target="_blank"
+                        title="邮件"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg t="1673342880243" class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" p-id="3108" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M789.333333 128A170.666667 170.666667.0 01960 298.666667v426.666666A170.666667 170.666667.0 01789.333333 896H234.666667A170.666667 170.666667.0 0164 725.333333V298.666667A170.666667 170.666667.0 01234.666667 128h554.666666zM896 371.797333 585.386667 519.722667a170.666667 170.666667.0 01-146.773334.0L128 371.797333v353.536a106.666667 106.666667.0 00102.037333 106.56L234.666667 832h554.666666a106.666667 106.666667.0 00106.56-102.037333L896 725.333333v-353.536zM789.333333 192H234.666667a106.666667 106.666667.0 00-106.56 102.037333L128 300.928l338.133333 161.024a106.666667 106.666667.0 0086.549334 2.282667l5.184-2.282667L896 300.906667V298.666667a106.666667 106.666667.0 00-102.037333-106.56L789.333333 192z" fill="#707070" p-id="3109"></path></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#总评">总评</a></li>
+      </ol>
+    </li>
+    <li><a href="#原则一元学习">原则一：元学习</a>
+      <ol>
+        <li><a href="#方法">方法</a></li>
+        <li><a href="#如何判断调研什么时候终止开始进行学习">如何判断调研什么时候终止，开始进行学习？</a></li>
+        <li><a href="#收益递减和边际效益计算">收益递减和边际效益计算</a></li>
+        <li><a href="#元学习具有长期价值">元学习具有长期价值</a></li>
+      </ol>
+    </li>
+    <li><a href="#原则二专注">原则二：专注</a>
+      <ol>
+        <li><a href="#人与专注力的斗争">人与专注力的斗争</a></li>
+        <li><a href="#如何提高专注力">如何提高专注力</a></li>
+      </ol>
+    </li>
+    <li><a href="#原则三直接">原则三：直接</a>
+      <ol>
+        <li><a href="#一个教育学概念迁移">一个教育学概念：迁移</a></li>
+        <li><a href="#具体方法">具体方法</a></li>
+      </ol>
+    </li>
+    <li><a href="#原则四训练">原则四：训练</a>
+      <ol>
+        <li><a href="#和原则三的冲突的解决">和原则三的冲突的解决</a></li>
+        <li><a href="#执行时需要注意的策略或难点">执行时需要注意的策略或难点</a></li>
+      </ol>
+    </li>
+    <li><a href="#原则五检索">原则五：检索</a>
+      <ol>
+        <li><a href="#一个有趣的现象">一个有趣的现象</a></li>
+        <li><a href="#应该检索什么">应该检索什么</a></li>
+        <li><a href="#练习检索的策略">练习检索的策略</a></li>
+      </ol>
+    </li>
+    <li><a href="#原则六反馈">原则六：反馈</a>
+      <ol>
+        <li><a href="#克服恐惧">克服恐惧</a></li>
+        <li><a href="#有效地处理反馈">有效地处理反馈</a></li>
+        <li><a href="#什么样的反馈是好的">什么样的反馈是好的</a></li>
+        <li><a href="#特别的几点">特别的几点</a></li>
+        <li><a href="#如何改进反馈">如何改进反馈</a></li>
+      </ol>
+    </li>
+    <li><a href="#原则七记忆">原则七：记忆</a>
+      <ol>
+        <li><a href="#遗忘的原理">遗忘的原理</a></li>
+        <li><a href="#如何不遗忘">如何不遗忘</a></li>
+      </ol>
+    </li>
+    <li><a href="#原则八直觉">原则八：直觉</a>
+      <ol>
+        <li><a href="#培养直觉">培养直觉</a></li>
+        <li><a href="#作者的发明费曼技巧2659">作者的发明：费曼技巧(#2659)</a></li>
+      </ol>
+    </li>
+    <li><a href="#原则九试验">原则九：试验</a>
+      <ol>
+        <li><a href="#三种类型的试验">三种类型的试验</a></li>
+        <li><a href="#试验的心态">试验的心态</a></li>
+        <li><a href="#如何试验">如何试验</a></li>
+        <li><a href="#试验具有不确定性">试验具有不确定性</a></li>
+      </ol>
+    </li>
+    <li><a href="#其他">其他</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/reports/" >
+                👓 观阅闻后感
+            </a>
+        
+        
+        
+    <section class="article-tags">
+        
+            <a href="/tags/%E4%B9%A6/">书</a>
+        
+    </section>
+
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/240224a/">《超级学习者》笔记</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2024/02/24</time>
+            </div>
+        
+
+        
+        <div>
+            <svg class="icon" style="width: 1.5em;height: 1.5em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 2048 2048" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4241">
+<g transform="scale(2, 2)" stroke="none">
+<path d="M841 822c-0.7 0.6-69 55.2-207.2-3.8-163.5-69.7-288.8-1.7-294 1.2-12.2 6.8-16.6 22.2-9.8 34.4 6.8 12.2 22.2 16.6 34.4 9.8 1.1-0.6 108.6-58.9 249.5 1.2 54.7 23.3 101 31.2 138.8 31.2 77 0 118.1-32.9 120.6-35 10.8-8.9 12.3-24.9 3.3-35.6-8.9-10.8-24.8-12.3-35.6-3.4zM529.3 488.7c-9.9-9.9-25.9-9.9-35.8 0L370.9 611.3c7.5-51.4 63.7-153.6 171.2-261.1 64-64 132-115.9 191.5-146.1 54.9-27.9 89.6-30.1 99.8-20 24.9 24.9-28.7 153.8-166.1 291.3-51.9 51.9-106.4 95.8-157.7 127.1-11.9 7.3-15.7 22.9-8.4 34.8 7.3 11.9 22.9 15.7 34.8 8.4 54.7-33.4 112.4-79.9 167.1-134.6 67.7-67.7 122.9-140.3 155.5-204.4 47.1-92.7 31.8-137.3 10.7-158.5-21.1-21.1-65.8-36.4-158.5 10.7-64.1 32.6-136.7 87.8-204.4 155.5-119 119-211.6 266.9-180.3 341.8L142 840.2c-9.9 9.9-9.9 25.9 0 35.8 4.9 4.9 11.4 7.4 17.9 7.4s13-2.5 17.9-7.4l351.5-351.5c9.9-9.9 9.9-25.9 0-35.8z" fill="#767676" p-id="4242"></path>
+</g>
+</svg>
+            <time class="article-time--reading">
+                <span class="post-word-count">10586 字</span>
+            </time>
+        </div>
+
+        
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    22 分钟
+                </time>
+            </div>
+        
+
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+
+       
+    
+
+    
+
+    <p>机械工业出版社华章分社（电子书）2022 版，加拿大，斯科特·H. 杨（Scott H. Young）著，姚育红 译</p>
+<h3 id="总评">总评</h3>
+<p>这本书是最早在 B 站上看到有人做英文版的解析，看到标题觉得有点意思，就自己找了中文版来读。虽说这类成功学书籍用的例子难免有鸡汤的嫌疑，但书中提到的原则、方法从理性上思考，无论整体来看还是部分来看都颇有道理，再加之书末附有参考文献，因此本书还是很有可取之处的。</p>
+<p>在这里做一个总结，随后是比较详细的笔记。笔记中用了不少引用，以包含足够的信息。</p>
+<p>本书的核心提到了 9 个原则，笔者在此将其划分为 3 块：</p>
+<p>第一块是启动学习项目前的准备。一方面需要弄清楚学什么，即“<strong>元学习</strong>”，另一方面确定了学习的过程中需要<strong>专心</strong>。同时需要注意贯穿整个学习过程的一个点，即学习要看成自发的一项活动，而不是外部强加的内容，从而减轻或消除痛苦感，提高效率。</p>
+<p>第二块是学习项目过程中的一些方法。通过查看结合实际应用会涉及到的内容来<strong>直接</strong>学习项目的核心，在这个过程中通过<strong>训练</strong>薄弱项来提高表现，同时一方面通过闭卷自由联想的方式来<strong>检索</strong>脑袋里的知识，对自己进行检测，另一方面勇于寻求直接、有效的强<strong>反馈</strong>来校正自己的学习内容和路线。</p>
+<p>第三块是对项目过程中学习效果的说明。最单一的效果即为<strong>记忆</strong>，但这往往不够，还需要更深刻的理解来建立对知识的敏感度和熟悉度，也即培养一种对知识的<strong>直觉</strong>，最后如果想发掘出适合自己的方法、技巧等，还需要积极地进行<strong>试验</strong>，包括对前面提到的所有内容进行试验，由此形成闭环。</p>
+<p>书中的理论和方法都不错，合起来用拆开来用都能有所裨益，但也要注意不能陷入教条主义，需要结合自己和项目的实际。最理想的状态是成为一个自主、灵活、高效的学习者。</p>
+<hr>
+<p>* (#数字) 代表引用的（电子书的）位置。<br></p>
+<h2 id="原则一元学习">原则一：元学习</h2>
+<p>元学习：元即“meta”，指向事物本身。元学习即对“学习”这件事的学习。</p>
+<h3 id="方法">方法</h3>
+<p>确定三个内容：</p>
+<ol>
+<li>
+<p>动机</p>
+<p>分为工具型、内在型。</p>
+<p>工具型的做额外研究，确定是否真的可以实现目标，可以通过访谈（电邮、社交软件、论坛；电邮沟通的时候注意简洁明了，第一次接触不要要求太多，注意文字无法包含语气信息，所以小心选择措辞）;</p>
+<p>内在型需要确定学习计划和教材是否与目标完成一致。</p>
+</li>
+<li>
+<p>内容</p>
+<p>对知识是如何构成的进行头脑风暴，确定需要不同程度掌握的概念、事实和程序。</p>
+<p>概念，即需要理解而不仅是记忆的东西，对有挑战的这些内容进行重点标记，即可找到学习时的瓶颈，从而进一步研究学习的方法；事实，即只需要记忆即可的东西；程序，即不涉及多少有意识思考的行动，例如学习语言时的发音等（e.g. 发音）</p>
+</li>
+<li>
+<p>方式</p>
+<p>包括资源、环境、方法等。关于方法的寻找，分为两个部分。</p>
+<p>第一个部分是预设一个策略作为起点，例如学习技能或学科的通用方法，如课程设置。第二个部分是“强调/学习法”，即找到和目标一致的领域，忽略或推迟与目标不一致的部分。</p>
+</li>
+</ol>
+<h3 id="如何判断调研什么时候终止开始进行学习">如何判断调研什么时候终止，开始进行学习？</h3>
+<p>比较好的经验方法：10% 法则：投入大约 10% 的预期学习时间在调查研究上。且，随着学习项目扩大，这个比例要缩小。</p>
+<p><span style="font-style: italic;">“&hellip;只是确保，你没有盲目抓住第一个可能的资源或方法，或者完全不去考虑其他选择。(#1084)”</span></p>
+<p>了解常用的学习方法、大众接受的资源和工具以及它们的优缺点。</p>
+<h3 id="收益递减和边际效益计算">收益递减和边际效益计算</h3>
+<p>学习过程中必须要考虑重新评估：元学习研究不是一次性活动。</p>
+<p>由于调研的难以完全充分，同样的信息带来的进步可能是收益递减的：随着学习的进行，该方法越感进步乏力。</p>
+<p>如何重新评估：比较元学习和常规学习的边际收益。</p>
+<p>一种方法：花更多时间做研究，在每种方法上花些时间，然后比较相对价值。若额外的研究没有太大帮助，最好坚持原先的计划。</p>
+<p>重新评估的回报往往起伏不定，可能花了很久也没有什么收获。</p>
+<p>可以结合前面的 10% 法则来进行。</p>
+<h3 id="元学习具有长期价值">元学习具有长期价值</h3>
+<p>获取收集资源的新渠道、更好的时间管理方法，以及自信心等。随着项目增多，元学习能力也会逐渐提升，从而开始良性循环。</p>
+<h2 id="原则二专注">原则二：专注</h2>
+<p><span style="font-style: italic;">“要想在学术领域做出伟大的学术成就，科学家都必须能够迅速地专注下来。(#1147)”</span></p>
+<h3 id="人与专注力的斗争">人与专注力的斗争</h3>
+<p>通常分为三种类型：① 如何开始专注；② 如何持续专注；③ 如何优化专注的质量。</p>
+<p>需要想出解决这三个问题的方法。</p>
+<ol>
+<li>
+<p>问题1：拖延</p>
+<p>较为简单的原因：有对别的事物的渴望，或者有对当前事物的厌恶。</p>
+<p><span style="font-style: italic;">“拖延大多是无意识的。(#1180)”</span></p>
+<ul>
+<li>
+<p>解决方案：</p>
+<p><strong>第一步</strong>：意识到自己在拖延。是有对其他事情更强烈的欲望，还是对当前事情的厌恶。</p>
+<p><strong>第二步</strong>：可以考虑使用一系列心理工具来克服纠结阶段。如：告诉自己在做其他事情前，先花仅仅 5 分钟来尝试一下目前这项工作。</p>
+<p><span style="font-style: italic;">“一项任务让人不愉快之处（如果你厌恶它）或者另一项任务中令人愉快之处（如果你被分散注意力）实际上都是一种冲动，这种冲动不会持续太久。即使是相当不愉快的任务，如果你真的开始工作或无视强有力的干扰物，通常只需要几分钟，你会不再焦虑。(#1192)”</span></p>
+<p><strong>第三步</strong>：克服在开始之后因为感到不愉快而难以集中注意力的情况。</p>
+<p>方法：</p>
+<ul>
+<li>使用番茄钟（笔者个人觉得不好用，相当于在主观上添加了“时间”维度，反而更有可能分心）</li>
+<li>“当你仍然被先前的问题困扰时，不要转向一个更难的目标。(#1201)”</li>
+<li>预测挫败感将会出现的时机，认识到这种挫败感造成的想要放弃只是一种冲动，然后设置一个小目标，比如再坚持一小会、完成下一个小部分等，坚持完成这个小目标，随后往往就能顺利推进。</li>
+</ul>
+<p><strong>第四步</strong>：有关长期规划，善用日历来充分利用时间，但必须要能真正遵循日程。若不能，则回到第一步培养这个习惯。</p>
+</li>
+<li>
+<p>抗外界事物插入干扰的方法：</p>
+<p>总的来说，要么放到一会再做，要么给当前的事务设置“断点”</p>
+<ul>
+<li>
+<p>有其他事务插入：设置类似“断点”，让自己在回到任务之后能够迅速进入状态继续</p>
+</li>
+<li>
+<p>有些不必要立刻进行的工作，如扫描、保存文件等，做个开头作为“标记”，如新建个文件夹等，等最后再回过头来完成</p>
+<p><span style="font-style: italic;">“你无法控制你的厌恶或分心，但你可以通过练习减轻它们的影响。(#1214)”</span></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>问题2：分心</p>
+<ol>
+<li>
+<p>前置问题：什么样的专注最能保持下去</p>
+<p><span style="font-style: italic;">“当一项任务既不太难也不太容易时，心流则是一种介于无聊和安逸之间的愉快状态。(#1225)”</span></p>
+<p>心流的状态最好，但是由于心流是“无意识”产生的，往往出现在熟练的任务中，因而在超级学习的过程中往往可遇不可求。</p>
+</li>
+<li>
+<p>前置问题 2：应该学习多长时间</p>
+<p>“把学习内容安排在不同的时间段进行联系比把学习内容挤在一起联系能记住更多内容。</p>
+<p><span style="font-style: italic;">“类似地，交织学习现象表明，在你注意力高度集中时，从不同角度出发来学习你所关注的技能也能提高效率。(#1248)”</span></p>
+<p>（笔者：可能是随时间增长，注意力将逐渐涣散的原因）</p>
+<p>这之中存在一个权衡：将整块时间分散到多个任务中获取的效率提升，与学习后期任务被分散导致的困难度提高之间的权衡。</p>
+<p>一个参考：选一段能集中注意力的最长时间，将总时间按此分块，每块学习科目的不同方面。</p>
+</li>
+<li>
+<p>注意力干扰源</p>
+<ol>
+<li>
+<p>环境</p>
+<p>需要了解最适合自己的工作环境，并测试是否真的能提升效率。比如一边听音乐一边工作是真的能完成更多还是只是让工作更容易忍受，若是后者则需要小心。</p>
+</li>
+<li>
+<p>任务</p>
+<p>强度更高的任务更难分心，对认知要求更少的任务则容易分心。因此可以对任务添加一些认知上的要求，比如读书时做笔记。</p>
+<p><span style="font-style: italic;">“为了更好地集中注意力，我会选择那些更直接（原则三）或更能提供反馈（原则六）的工具。(#1276)”</span></p>
+</li>
+<li>
+<p>大脑</p>
+<p>e.g. 负面情绪、烦躁不安、百日梦等。解决方法是接纳这种情绪、告诉自己能感知到这种情绪而不是急着拒绝它，然后<span style="font-style: italic;">“轻轻地把注意力转移到你的任务上，让这种情绪过去。(#1285)”</span>。和“正念”的概念类似。</p>
+<p><span style="font-style: italic;">“如果完全停下任务来回应情绪，在未来，你的情绪就会减弱。(#1285)”</span></p>
+<p>即便在这样的时期完成的任务不多，但如果能坚持继续执行任务，就会提高对抗情绪的能力，对长期来讲是有益的。</p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p>问题3：没有找到合适的专注点</p>
+<p>这个问题指：对手头的任务要有要有多么专注比较合适</p>
+<p>一个概念：兴奋度对注意力的影响：</p>
+<ul>
+<li>高兴奋度提供高注意力，但时间可能较短；适合小目标，但不适合持续较长时间的任务。</li>
+<li>复杂的任务收益于轻松的专注状态，从而获得更大而分散的专注的空间，从而有助于考虑到不同的情况或想法。</li>
+<li>如果任务是特别有创造性的，不专注反而更有益。但不等于“懒惰”，而是那种一直留意但又不特意去想它的状态。<span style="font-style: italic;">“休息一下有助于为解决难题带来新的视角。(#1321)”</span></li>
+</ul>
+<p>因此，可以通过感受自己的兴奋度来选择执行合适的任务，或者反过来。上述是个基本参考，每个人有自己的一套标准。</p>
+</li>
+</ol>
+<h3 id="如何提高专注力">如何提高专注力</h3>
+<ol>
+<li>
+<p>认清自己的水平；</p>
+</li>
+<li>
+<p>从小事做起，每次抗拒分心都会减轻分心的影响。</p>
+</li>
+</ol>
+<h2 id="原则三直接">原则三：直接</h2>
+<p>指将学习理论与实际的使用情境或环境紧密连接起来。</p>
+<p>然而通常情况下，<span style="font-style: italic;">“直接学习让我们感觉不适、无聊或聚散，所以我们单纯满足于一些图书、讲座或应用程序，并寄希望于它们最终能让我们学会某种技能。(#1391)”</span></p>
+<p>直接学习的关键是“在使用中学习”。</p>
+<p>间接学习：学习事实、概念和技能，而非应用。包括致力于学习高度理想化的问题以至于以后都很难遇到</p>
+<p>例子：只听讲座来学习是很“间接”的，需要结合习题集来练习达到直接接触，不过在这之前也需要先吃透教材。</p>
+<p><span style="font-style: italic;">“直接学习原则认为，只有在你想习得的技能上进行大量实践时，你才会真正学懂、悟透。(#1418)”</span></p>
+<p>如果不能做到“真的直接”，则选择那些接近的项目，以逐渐提高自我表现。</p>
+<h3 id="一个教育学概念迁移">一个教育学概念：迁移</h3>
+<p>定义：将在一种环境中学到的东西在另一种环境中使用。（在机器学习中的相似概念应为“泛化能力”。）</p>
+<p>知识有限时，迁移更难；学会更多的知识和技能时，就会更加灵活，也就更容易将其应用于其他项目。在此，作者指出，因为大多数正规学习都是间接性的，所以迁移很难发生。<span style="font-style: italic;">(#1480)</span></p>
+<p>直接学习一方面缩短了学习内容与运用领域的距离，从而缩短了迁移的距离；另一方面与现实紧密联系，能够捕捉知识与现实之间微妙的相互作用的细节，或获取意外的技能（例如熟练掌握单词释义检索工具），从而更有助于借助现实环境实现迁移。</p>
+<p>因此需要基于现实环境构建知识，将新事物与要使用它们的场景联系起来。</p>
+<h3 id="具体方法">具体方法</h3>
+<ol>
+<li>
+<p>简单的方案</p>
+<p>将大部分学习时间花在想做得更好的事情上。如果办不到，则需要人为创建一个项目或环境来检验该项技能。其中的重点是，试图掌握的技能的认知特征和练习的方式要基本上是相似的。随后，在这个基础上逐渐加深知识的深度，从而能更灵活地达成迁移。</p>
+<p>即便是非常抽象的任务，如“获取对 XX 科目的深入理解，也可以具象到一个应用场景中，比如目标设定为能与人以此为话题进行交流，所以多尝试进行语言输出、算法推导等。</p>
+<p>迁移问题是否出现的检查方案：询问自己：<span style="font-style: italic;">“&hellip;问问自己你要将知识运用到哪里、如何运用。回答完这个问题，再可以问自己，你是否采取了实际行动，来把你所学到的知识与其应用环境联系起来。(#1582)”</span></p>
+<p>（从机器学习的角度来理解，训练集需要有较高的质量以反映标签。）</p>
+<p>直接学习更有挑战性、更容易让人有挫败感，但收获也是无可比拟的。</p>
+</li>
+<li>
+<p>一些策略</p>
+<ol>
+<li>
+<p>基于项目的学习</p>
+<p>选择项目而不是课程来学习需要的技能。需要能看到一个成果。</p>
+</li>
+<li>
+<p>沉浸式学习</p>
+<p>即将自己置身于目标环境中。例子：语言学习、社团、程序开源项目等。</p>
+</li>
+<li>
+<p>模拟器</p>
+<p>即仿真模拟，适用于难以进行沉浸、直接化的项目。</p>
+<p>理论：直接学习的关键不在于环境特征，而在于学习者的“认知特征”：在某些情况下应该做出什么样的行为。</p>
+</li>
+<li>
+<p>增加难度</p>
+<p>可以考虑尝试一开始就一定量地提高难度，从而更容易地暴露项目特殊点，获得更尖锐的反馈，获取更重要的教训。</p>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="原则四训练">原则四：训练</h2>
+<p>学习的过程中会在某些方面形成“瓶颈”，控制熟练掌握整理技能的速度。</p>
+<p>因此，反复训练的策略即是：<span style="font-style: italic;">“在学习中确定一个限速步骤，将它分离出来，并对它进行专门训练，因为它支配着你在该技能上的整体能力。(#1644)”</span></p>
+<p>针对性训练相比于整体训练的优势：能避开学习陷阱，即为了提高在某一方面的表现而在此投入过多注意力，导致在其他方面的表现开始下滑，而评估又是基于整体的，因此导致进步慢下来。</p>
+<h3 id="和原则三的冲突的解决">和原则三的冲突的解决</h3>
+<p>先直接学习，后反复训练。把直接学习和反复训练看作一个更大周期中的交替阶段。</p>
+<ol>
+<li>第一步先尝试直接练习，弄清楚技能何处使用，怎么使用，在练习时尽量接近实际情况；</li>
+<li>分析直接技能，尝试分理出限速步骤环节或难以改进的子技能；</li>
+<li>最后回到直接学习中整合，从而及时反馈发现问题。之后再在直接学习和反复训练中往返。</li>
+</ol>
+<p>越往后，花在反复训练的时间可能越多，因为难度会随之提高。</p>
+<h3 id="执行时需要注意的策略或难点">执行时需要注意的策略或难点</h3>
+<ol>
+<li>
+<p>弄清楚什么时候训练什么</p>
+<p>不确定是不是限速步骤的时候，可以先试一试</p>
+</li>
+<li>
+<p>设计出能够提高技能的训练项目</p>
+</li>
+<li>
+<p>反复训练很艰难且令人不快，因此有一些策略</p>
+<ol>
+<li>切段练习</li>
+<li>将任务的认知成分提取出来，例如“语言”任务中的声调</li>
+<li>模仿、复制那些非重点练习的部分来减轻不得不整体练习时产生的认知负担</li>
+<li>在子技能上投入更多的时间</li>
+<li>碰到需要练习的前置内容再去练习，而非一开始就学习前置内容，从而节省时间</li>
+</ol>
+</li>
+<li>
+<p>不要花太多时间在已经熟练/感兴趣的部分，要勇于练习那些自己还不熟悉的部分，并克服练习过程中产生的不适感、挫败感。在这过程中要把学习看成是自己主导而非外界环境强加的内容，从而尝试找到乐于学习的角度。</p>
+</li>
+</ol>
+<h2 id="原则五检索">原则五：检索</h2>
+<p>这里指的是试着不急着看课本而从大脑记忆中没有提示地去回忆事实和概念。</p>
+<p>回忆检索型的练习比被动学习（看书来复习）能提供有效的长期记忆。</p>
+<p>且无论对内容掌握了多少，这种检索型的练习都能生效，且可以和查找答案的能力结合起来。</p>
+<p>可行性理论：R. A. Bjork 的“可取的困难”：<span style="font-style: italic;">“只要检索行为的方向是对的，越艰难的检索会带来越好的学习效果。(#1824)”</span></p>
+<p>效果好坏：自由回忆 ＞ 线索回忆 ＞ 识别测试（多项选择）</p>
+<ul>
+<li>在准备好之前就进行自我测试是更有效率的</li>
+<li>对于新学会的知识，将第一次测试时间推迟一下比学完马上测试要好</li>
+</ul>
+<h3 id="一个有趣的现象">一个有趣的现象</h3>
+<p>前向测试效应：检索不仅有助于巩固，还有助于为学习做好准备。对以前学习过的信息进行定期测试可以使学习新信息变得更容易</p>
+<h3 id="应该检索什么">应该检索什么</h3>
+<p><span style="font-style: italic;">“总有一些事情，你要选择去掌握，而另一些事情，在需要的时候你可以马上查得到，这就足矣。(#1865)”</span></p>
+<p>方法：直接法 + 广且多的被动接触</p>
+<p>和直接法联系起来：直接法能迫使你去检索在实际应用过程中经常出现的问题。所以可以直接进行实践。</p>
+<p>该方法能自动检索高频知识点。但也有一个缺点：如果知识库不足，对能够解决问题的知识毫无概念，则检索也无从谈起。仅仅使用该方法会忽略掉可以帮助解决问题但严格讲有不必要的知识，因此需要结合广泛的被动接触来提升原有知识库的广度。</p>
+<h3 id="练习检索的策略">练习检索的策略</h3>
+<ol>
+<li>
+<p>记忆卡</p>
+<p>主要缺点：只对特定线索和特定答案配队时的检索非常有效。应用环境极其多变时，就存在缺陷。</p>
+</li>
+<li>
+<p>自由回忆</p>
+<p>在完成一次学习后，试着把能记住的所有东西都写在一张白纸上。</p>
+</li>
+<li>
+<p>问题集</p>
+<p>和记笔记的一种策略相关：把记下来的内容重新表述成问题，待会再回答，从而获得练习检索的资料。不要把重点放在无关紧要的问题上，不要事无巨细，提一些具有思考深度的问题。其中一个方法是每个章节只允许问一个问题。</p>
+</li>
+<li>
+<p>自创挑战</p>
+<p>创建挑战性问题，比如将课上学到的理论和如何应用于实践联系起来，然后找一个例子，甚至实现这个例子，例如编程领域的学习。</p>
+</li>
+<li>
+<p>闭卷学习</p>
+<p>切断寻找提示的可能，减少查阅资料的冲动，多依靠自己的回忆。</p>
+</li>
+</ol>
+<h2 id="原则六反馈">原则六：反馈</h2>
+<p>超级学习方法的反馈即时、准确性高、强度大。</p>
+<h3 id="克服恐惧">克服恐惧</h3>
+<p><span style="font-style: italic;">“有时候，最好的行动就是直接处理最困难的情况，因为即使最初的反馈是非常消极的，它也有助于减少你开始一个项目的恐惧。(#2009)”</span></p>
+<p>要学会能够拥抱重大打击性反馈，并从中汲取信息。“一旦你养成了接受反馈的西馆，处理反馈就会变得更容易，你就不会在情绪上过度反应。(#2155)”</p>
+<h3 id="有效地处理反馈">有效地处理反馈</h3>
+<p><span style="font-style: italic;">“&hellip;对一个人的表现获取即时反馈的能力是达到专家水平的一个重要因素。(#1970)”</span></p>
+<p>反馈重点不在于量，而在于类型，必须要能提供有用的信息来指导未来的学习，而非针对个人的评价。要建设性地使用反馈，对真正有用的反馈非常敏感，而忽略其他的反馈（例如和个人方向完全冲突的反馈），且无论对积极反馈还是消极反馈都不反应过度。</p>
+<p>另外，<span style="font-style: italic;">“&hellip;由谁提供反馈信息也很重要，来自同伴或老师的反馈具有强大的社会动力。(#1992)”</span></p>
+<h3 id="什么样的反馈是好的">什么样的反馈是好的</h3>
+<p>不应该先验地固定“学习项目需要什么样的反馈”，而是考虑所有类型的反馈后再思考如何采取意见。</p>
+<p>强调的三种类型的反馈：</p>
+<ul>
+<li>
+<p>结果反馈</p>
+<p>影响最小的一种，只会针对整体好坏做出反馈，而无针对其中部分的信息。但也是有帮助的，这意味着可以对项目进行很轻松的更改变动。这种反馈能提供激励基准从而更新进度，也能展示正在尝试的不同方法的优点。</p>
+</li>
+<li>
+<p>信息反馈</p>
+<p>告知做错了什么，但不一定会说明如何改正，即结果反馈从整体作用到部分上。当能实时访问反馈源时，经常获得这样的反馈（例如程序报错）。在直接法中也有体现，即和环境的互动中。</p>
+</li>
+<li>
+<p>纠正性反馈</p>
+<p>“‘对接受反馈的学生来说，最好的反馈是信息丰富且有针对性的建设性意见的。’(#2062)”这种反馈常常需要找到一位老师，且这样的努力是非常值得的。而且这种反馈也能很大程度上不同消除信息反馈中可能遇到的矛盾性。</p>
+</li>
+</ul>
+<h3 id="特别的几点">特别的几点</h3>
+<ul>
+<li>并非所有弱反馈到强反馈都是好的，特别是反馈的有效、准确性因此降低时；</li>
+<li>反馈的一致性很有用；</li>
+<li>即时反馈相比于延迟反馈更好，且和延迟第一次检索的做法可以相容，即“即时的反馈最好与延迟的复习（或进一步的测试）相结合来增强记忆(#2097)”，但要注意保证反馈的可靠性，即要尽全力回答问题或解决难题后再寻求反馈；</li>
+<li>反馈不能太快，否则会变成被动复习；</li>
+<li>只有能记住教训时，反馈才是有用的。</li>
+</ul>
+<h3 id="如何改进反馈">如何改进反馈</h3>
+<p>几个策略</p>
+<ol>
+<li>
+<p>消除噪声</p>
+<p>修改和选择所关注的反馈流来消除噪声，减少无用信息。可以选择“代理信号”，即侧面的反馈。</p>
+</li>
+<li>
+<p>达到最佳难度点</p>
+<p>“只有当反馈结果很难预测时，收到反馈才能为你的改进提供更多的信息。(#2124)”要警惕一直顺遂的反馈，类比于信息论中难以预测的事件提供的信息量才多。“基本上，应该尽量避免那些总是让你对自己的表现感觉良好（或不好）的情况。(#2128)”</p>
+</li>
+<li>
+<p>元反馈</p>
+<p>定义：评估学习的策略的整体成功程度。重要形式：学习速度，技能提升的速度。应用情景：当学习速度太低时考虑更换策略，或比较不同策略之间的效果。</p>
+</li>
+<li>
+<p>高强度、快速反馈</p>
+<p>意见越丰富越好，反馈次数越多越好，且尽量适应、消除其中情绪化的影响。</p>
+</li>
+</ol>
+<h2 id="原则七记忆">原则七：记忆</h2>
+<p><span style="font-style: italic;">“‘记忆是思考的灰烬。’——Daniel Willingham，认知心理学家(#2161)”</span></p>
+<h3 id="遗忘的原理">遗忘的原理</h3>
+<p>三种主要理论：衰退（时间因素）、干扰（竞争和覆写，前摄和后摄）、遗忘（只是难以获取，线索断裂）</p>
+<p><span style="font-style: italic;">“记忆的行为不是一个被动的过程。在回忆事实、事件或知识时，我们参与了一个创造性的重建过程。记忆本身在记忆过程中经常被修改、增强或操作。通过新的线索找回的‘失去的’记忆实际上可能是捏造的。(#2294)”</span> → 《齐马蓝》记忆的易变性</p>
+<h3 id="如何不遗忘">如何不遗忘</h3>
+<p>两个挑战：短期的：如何不学了就忘；长期的：如何能持久记忆</p>
+<p>每个人用来记忆的系统不同，但都有一些共同的机制：</p>
+<ol>
+<li>
+<p>间隔-重复学习系统（SRS）</p>
+<p>将学习内容划分成小段：比方：在 10 天内每天学习 1h 强于 1 天内一次性学习 10h。在这之间找到一个合适的平衡点</p>
+<p>SRS 不适用于需要理解的、有复杂信息关联的知识，因为这些知识需要通过真正操作来建立记忆和联系。SRS 对扩展记忆，特别是一一对应的记忆有效。</p>
+<p>类似的做法：对技能进行半规律、半定期的练习。适用于更复杂、更难融入日常的技能。</p>
+</li>
+<li>
+<p>程序化：自动持久</p>
+<p><span style="font-style: italic;">“程序性技能，如你永远记得怎么骑自行车，比需要外显回忆才能检索的知识更不容易被遗忘。(#2352)”</span></p>
+<p>一个理论：大多数技能都是阶段性的，一开始是说明性，随着练习增多最终会变成程序性的。</p>
+<p>一般情况下，不会均衡地学习大量知识或技能，而是会更频繁地强调一组核心信息，从而让其程序化，储存时间更长。大多数技能都不是完全程序化的，其中一部分能自动完成，但另外的需要从大脑中主动搜寻。</p>
+<p>一个方法：花费一定精力，使一些技能程序化，把这个技能作为其他知识的索引。</p>
+</li>
+<li>
+<p>精益求精：熟能生巧，超越完美</p>
+<p>额外的练习可以增加记忆储存的时长，即便正确了也继续重复。可与前两条结合。</p>
+<p>两种策略：不断练习完善某个技能的核心部分，或者提高技能的等级，自然而然地在将较低级技能的核心部分应用到高级时达成精益求精。</p>
+<p>与直接学习匹配：直接学习往往涉及对某些核心能力的过度练习。</p>
+</li>
+<li>
+<p>助记法：一图胜千言</p>
+<p>有很多方法。e.g. 关键字法。但助记法并不是关键，只能作为困难信息或紧急情况的记忆桥梁。前期投入较大，在实际中应用窄，且不如直接记忆自动。</p>
+</li>
+</ol>
+<h2 id="原则八直觉">原则八：直觉</h2>
+<p><span style="font-style: italic;">“只有不断解决问题，积累了足够的经验，你才能建立起一个深层思维模型。直觉听起来很神奇，但其实可能很老套——它是有条理地处理了大量问题后的经验产物。(#2534)”“&hellip;通过广泛的具体环境实践以成为专家&hellip;(#2562)”</span></p>
+<p>建立起巨大的“心理表征库”</p>
+<p><span style="font-style: italic;">“&hellip;把重点放在原理上，以例子为基础，直接切入问题核心，而不是只关注表面特征。(#2551)”而切入核心的能力，在于有一个庞大的模式库。</span></p>
+<p>笔者：这里的“直觉”应该不是指“拍脑袋决策”的那种“直觉”，而应该解释成对熟悉事物的相当高的敏感度。在真正工作或决策的时候还需要小心前者。</p>
+<h3 id="培养直觉">培养直觉</h3>
+<p>花大量时间学习 ≠ 能产生深刻直觉</p>
+<p>培养直觉的几个规则：</p>
+<ol>
+<li>
+<p>不要轻易放弃难题</p>
+<p>达成“不轻易放弃”的具体技巧：设定一个“计时器”，想要放弃且不可能找到解决难题的方法时，再计时 10 分钟，让自己再努力一会。</p>
+<p>两个优点：有足够的时间思考；找到解决方法时更容易记住这个方法。</p>
+</li>
+<li>
+<p>通过证明来理解</p>
+<p>不是单纯的理解，而是要融入推导的过程，有助于培养直觉。在这期间不直接阅读他人的推导过程来理解结论，而是先自己深入思考。不要陷入“边阅读边点头赞同”的简单理解的陷阱（“解释性深度错觉”）。<span style="font-style: italic;">“这种以为自己已经理解了的错觉常常是学习更深层次知识的障碍，因为除非对这种能力进行实际测试，否则你很容易误导自己，以为自己理解得更多。(#2612)”</span></p>
+</li>
+<li>
+<p>总是从具体的例子开始</p>
+<p><span style="font-style: italic;">“迁移研究表明，大多数人是在接触了许多具体的例子后才学会抽象的一般规则的。(#2620)”</span></p>
+<p>处理水平效应（levels of processing effect）：决定信息被记住的，不仅仅是所花的时间，更重要的是如何思考这些信息的。</p>
+<p>针对问题构思具体实例，可以利用反馈来测试自己是否真的理解。<span style="font-style: italic;">“&hellip;如果你无法想出一个合适的例子，那就说明你对某些东西理解得不够好&hellip;(#2634)”</span></p>
+</li>
+<li>
+<p>不要欺骗自己</p>
+<p>邓宁-克鲁格效应：当缺乏某一学科的知识时，往往也缺乏在这个学科上正确评估自己的能力。</p>
+<p>避免的方法：问很多问题，甚至是简单、愚蠢的问题。</p>
+</li>
+</ol>
+<h3 id="作者的发明费曼技巧2659">作者的发明：费曼技巧(#2659)</h3>
+<p>用于消除解释性深度错觉。</p>
+<p>操作方法：</p>
+<ol>
+<li>在一张纸的顶部写下想要理解的概念或问题。</li>
+<li>在下方解释这个想法，就像想要说服别人理解这个想法一样：如果是一个概念，思考如何把这个概念传达给以前从未听说过的人；如果是一个问题，思考如何解释它，重要的是解释自己是怎么理解解答步骤的。</li>
+<li>当过程失败时，参考答案。</li>
+</ol>
+<p>应用：</p>
+<ol>
+<li>完全不理解的东西
+在自己的解释和书中的解释之间来回切换。</li>
+<li>似乎不能解决的问题（难题）
+在解释问题的同时一步步分析问题，不轻易做总结，因为总结容易跳过问题的核心难点。</li>
+<li>非常重要的概念
+应用于非常重要的概念来扩展直觉，把注意力集中在生成一些例子、类推或可视化学习中。想象有人付薪水来解释概念。</li>
+</ol>
+<h2 id="原则九试验">原则九：试验</h2>
+<p>假设、实验、结果、重复。实验不一定要成功才有价值。多样性、高强度。</p>
+<p><span style="font-style: italic;">“新手和大师级程序员之间的区别通常不在于新手不能解决某些问题，而是大师们知道如何使用最佳方法，最有效、最干净地、没有任何后续麻烦地解决问题。(#2812)”</span>在这过程中需要选择性地遗忘陈旧无效的方法。</p>
+<p>实验可以找到初期的感觉、突破停滞期、找到独创性。</p>
+<h3 id="三种类型的试验">三种类型的试验</h3>
+<ol>
+<li>
+<p>资源试验</p>
+<p>学习方法、材料和资源。试验冲动需要有与之相当的付出，最后能回过头来选择一个比较好的资源。</p>
+</li>
+<li>
+<p>技能试验</p>
+<p>“接下来我应该学什么”，是资源选择的下一步选择。</p>
+</li>
+<li>
+<p>风格试验</p>
+<p>在如何做某事上尝试不同的可能性。关键是要了解现行的所有不同风格，而不是一开始就盲目地试。</p>
+</li>
+</ol>
+<h3 id="试验的心态">试验的心态</h3>
+<p><span style="font-style: italic;">“试验基于这样一种信念，即你能够改进你的学习方法。如果你认为你的学习风格试固定不辩的，或者你认为自己具有某些不可改变的优点和缺点，这将阻止你去尝试不同的方法来获得技能，你将根本无法进行尝试。(#2860)”</span></p>
+<p><span style="font-style: italic;">“成长型思维模式鼓励你看到改进的机会和潜力，试验则执行某项计划来实现改进结果。(#2863)”</span></p>
+<h3 id="如何试验">如何试验</h3>
+<p>先了解自己的问题，然后想出方法来解决。</p>
+<p>一些策略：</p>
+<ol>
+<li>
+<p>模仿，然后创造</p>
+<p>提供了一个立足点。而且在模仿时会有解构的过程，从而发现原理，甚至推翻自己以前的猜想。</p>
+</li>
+<li>
+<p>平行比较各种方法</p>
+<p>可应用控制变量法、分割测试。</p>
+</li>
+<li>
+<p>引入新的约束</p>
+<p><span style="font-style: italic;">“学习的最初挑战在于你不知道该做什么，学习的最终挑战在于你认为自己已经知道该做什么。(#2894)”</span>引入新的约束条件，使旧方法失效，摆脱惯性思维，激励自己探索不太熟悉的选项，发掘潜力。<span style="font-style: italic;">“最了不起的创新来自约束和限制&hellip;(#2898)”</span></p>
+</li>
+<li>
+<p>探索不相关的技能</p>
+<p>对于创造性或专业技能的领域，将两种不一定重叠的技能结合起来，从而获得相比于专攻的明显优势。跨越多个超级学习项目，协同增效。</p>
+</li>
+<li>
+<p>探索极端</p>
+<p><span style="font-style: italic;">“技能领域越复杂，包含的维度越多，技能的应用范围就越大，而这些应用至少跨越了其中一个维度。(#2919)”</span>不要囿于中庸之道，尝试把正在培养的技能的某些方面发挥到极致，从而搜索尽可能广的可能性空间。</p>
+</li>
+</ol>
+<h3 id="试验具有不确定性">试验具有不确定性</h3>
+<p><span style="font-style: italic;">“试验会帮助你在方法上的细微差异中做出决定，而这些差异是没有一份原则列表可以详尽涵盖的。(#2930)”</span>无论对于学习的项目，还是学习本身都是如此。</p>
+<h2 id="其他">其他</h2>
+<p>后面的章节的内容：</p>
+<ul>
+<li>本书提供了手把手教学开启第一个超级学习项目的方法，涵盖以上原则，且提供了具体的操作细节。</li>
+<li>超级学习的两种主要替代策略：低强度习惯（随时间自然积累）和正规的系统教育。<br>
+<span style="font-style: italic;">“当学习过程主要是积累、增加新技能和知识时，学习习惯往往能发挥最佳作用。如果完善某一领域需要摒弃无效的行为或技能，超级学习和有针对性的努力更适合。(#3136)”</span>特别是后者有助于克服挫败感。<br>
+正规系统教育也可以看成是一种资源，特别是沉浸式的有专家参与的那种学习氛围，所以不能单纯地看作是过时的方案。</li>
+<li>本书还提供了对小孩子的超级学习的比较非常规的培养方法，以及作为教育者对学习者制定方案的建议</li>
+<li>本书附有作者自己的一些超级学习项目的说明</li>
+<li>本书最后提供了一个可供填空的操作手册</li>
+</ul>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <script src="//cdn.jsdelivr.net/npm/twikoo@1.6.27/dist/twikoo.all.min.js"></script>
+<div id="tcomment"></div>
+<style>
+    .twikoo {
+         
+        border-radius: var(--card-border-radius);
+        border-width: 0;
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+    :root[data-scheme="dark"] {
+        --twikoo-body-text-color-main: rgba(255, 255, 255, 0.9);
+        --twikoo-body-text-color: rgba(255, 255, 255, 0.7);
+    }
+    .twikoo .el-input-group__prepend,
+    .twikoo .tk-action-icon,
+    .twikoo .tk-submit-action-icon,
+    .twikoo .tk-time,
+    .twikoo .tk-comments-no,
+    .twikoo .tk-comments-count {
+        color: var(--twikoo-body-text-color);
+    }
+    .twikoo .el-input__inner,
+    .twikoo .el-textarea__inner,
+    .twikoo .tk-preview-container,
+    .twikoo .tk-content,
+    .twikoo .tk-nick,
+    .twikoo .tk-send {
+        color: var(--twikoo-body-text-color-main);
+    }
+    .twikoo .el-button{
+        color: var(--twikoo-body-text-color)!important;
+    }
+    .twikoo .el-input__count {
+        color: var(--twikoo-body-text-color) !important;
+    }
+    .OwO .OwO-body {
+        background-color: var(--body-background) !important;
+        color: var(--body-text-color) !important;
+    }
+</style><script>
+    twikoo.init({
+        envId: 'https:\/\/twikoo.pyram1dcat.site\/',
+        el: '#tcomment',})
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2023 - 
+        
+        2024 Pyram1dCat
+    </section>
+    
+    
+
+    <section class="powerby">
+
+        
+            
+
+        
+            Licensed under CC BY-NC-SA 4.0 <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.21.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
