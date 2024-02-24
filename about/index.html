@@ -297,7 +297,7 @@
     
 <style>
     #back2topBtn {
-      display: none;
+      display: block;
       position: fixed;
       width: 50px;
       height: auto;
@@ -312,18 +312,22 @@
       padding: 7px;
       border-radius: 10px;
       backdrop-filter: blur(1px);
-      transition: .5s;
 
+      transition-duration: .5s;
+      transition-delay: 0;
+      transform: translateY(100px);
        
        
     }
     
     #back2topBtn:hover {
       background-color: #8f8f8f56;
-       
     }
 
-     
+    .showBtn {
+         
+        transform: translateY(0) !important;
+    }
     </style>
 
 <button onclick="topFunction()" id="back2topBtn" title="回顶部">
@@ -352,14 +356,14 @@
         
         if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
             console.log('toggle true');
-            document.getElementById("back2topBtn").style.display = "block";
+        
+        
+        
+        
+        document.getElementById("back2topBtn").classList.add("showBtn");
         } else {
-            document.getElementById("back2topBtn").style.display = "none";
+        document.getElementById("back2topBtn").classList.remove("showBtn");
         }
-        
-        
-        
-        
     }
     
     
