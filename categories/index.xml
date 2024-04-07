@@ -7,7 +7,15 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Pyram1dCat</copyright>
-        <lastBuildDate>Sat, 24 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://pyram1dcat.site/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 07 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://pyram1dcat.site/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>🚃 旅和游</title>
+        <link>https://pyram1dcat.site/categories/travel/</link>
+        <pubDate>Sun, 07 Apr 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://pyram1dcat.site/categories/travel/</guid>
+        <description>&lt;img src="https://pyram1dcat.site/categories/travel/travel_img.jpg" alt="Featured image of post 🚃 旅和游" /&gt;</description>
+        </item>
+        <item>
         <title>👓 观阅闻后感</title>
         <link>https://pyram1dcat.site/categories/reports/</link>
         <pubDate>Sat, 24 Feb 2024 00:00:00 +0000</pubDate>
@@ -38,14 +46,6 @@
         
         <guid>https://pyram1dcat.site/categories/learning/</guid>
         <description>&lt;img src="https://pyram1dcat.site/categories/learning/learning_img.jpg" alt="Featured image of post 💡 知识库" /&gt;</description>
-        </item>
-        <item>
-        <title>🚃 旅和游</title>
-        <link>https://pyram1dcat.site/categories/travel/</link>
-        <pubDate>Sun, 07 Jan 2024 00:00:00 +0000</pubDate>
-        
-        <guid>https://pyram1dcat.site/categories/travel/</guid>
-        <description>&lt;img src="https://pyram1dcat.site/categories/travel/travel_img.jpg" alt="Featured image of post 🚃 旅和游" /&gt;</description>
         </item>
         <item>
         <title>📦 杂项</title>
