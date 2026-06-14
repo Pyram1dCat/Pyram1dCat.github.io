@@ -1,13 +1,36 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
-    <head><meta charset='utf-8'>
+    <head>
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=' 清明节假期没去踏青，最后一天心血来潮潜入了还未交付的新学生服务大楼探索了一番。大楼从内至外都修葺得相当气派，内部四通八达、格局通透，外部毗邻涵泽湖，与湖水相得益彰。但有些格局设计还是有问题的，一楼有几个卫生间有一面是大窗或者大落地窗，从外面来看卫生间内一览无余，看到的时候实在忍不住发笑。
 '>
 <title>夜访新学生服务中心</title>
 
 <link rel='canonical' href='https://pyram1dcat.site/travel/240407s/'>
 
-<link rel="stylesheet" href="/scss/style.min.031609ab51d189a5995522b0c8d0f14b900ae4cafe37b75f66256c8cce0db0cc.css"><meta property='og:title' content='夜访新学生服务中心'>
+<link rel="stylesheet" href="/scss/style.min.9590cb86647a21d1efe85d9dd5295b1c79e735c9e298cb787e445f2cee8d68db.css"><meta property='og:title' content='夜访新学生服务中心'>
 <meta property='og:description' content=' 清明节假期没去踏青，最后一天心血来潮潜入了还未交付的新学生服务大楼探索了一番。大楼从内至外都修葺得相当气派，内部四通八达、格局通透，外部毗邻涵泽湖，与湖水相得益彰。但有些格局设计还是有问题的，一楼有几个卫生间有一面是大窗或者大落地窗，从外面来看卫生间内一览无余，看到的时候实在忍不住发笑。
 '>
 <meta property='og:url' content='https://pyram1dcat.site/travel/240407s/'>
@@ -31,29 +54,7 @@
     <body class="
     article-page
     ">
-    <script>
-        (function() {
-            const colorSchemeKey = 'StackColorScheme';
-            if(!localStorage.getItem(colorSchemeKey)){
-                localStorage.setItem(colorSchemeKey, "auto");
-            }
-        })();
-    </script><script>
-    (function() {
-        const colorSchemeKey = 'StackColorScheme';
-        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
-        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
-
-        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
-            
-
-            document.documentElement.dataset.scheme = 'dark';
-        } else {
-            document.documentElement.dataset.scheme = 'light';
-        }
-    })();
-</script>
-<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+        <div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
     <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
@@ -268,9 +269,13 @@
 
     <div class="article-details">
     
+    
+    
+        
+    
     <header class="article-category">
         
-            <a href="/categories/travel/" >
+            <a href="/categories/travel/" style="background-color: #0177b8; color: #fff;">
                 🚃 旅和游
             </a>
         
