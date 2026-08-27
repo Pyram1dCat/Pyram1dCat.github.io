@@ -146,7 +146,7 @@
 }
 .category-tile:hover::before { opacity: .1; }
 .category-tile::after { content: ''; position: absolute; z-index: 3; inset: 0; background: linear-gradient(90deg, color-mix(in srgb, var(--category-color) 92%, #000), transparent 115%); }
-.category-tile img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity .25s ease; }
+.category-tile img { position: absolute; z-index: 1; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity .25s ease; }
 .category-tile.is-loading img:not(.is-image-loaded) { opacity: 0; }
 .category-details { position: relative; z-index: 5; min-height: 170px; padding: 25px; display: flex; flex-direction: column; justify-content: flex-end; gap: 6px; }
 .category-tile strong { font-size: 2rem; }
@@ -169,16 +169,35 @@
 }
 .category-loader,
 .lightbox-loader { --image-progress-color: #fff; --image-progress-track: rgba(255, 255, 255, .35); }
-.category-loader { position: absolute; z-index: 1; top: 50%; left: 50%; margin: -15px 0 0 -15px; }
+.category-loader { position: absolute; z-index: 4; top: 50%; left: 50%; margin: -15px 0 0 -15px; }
 .category-tile:not(.is-loading) .category-loader { opacity: 0; }
 .image-progress { position: relative; isolation: isolate; --image-progress-angle: 0deg; }
+.image-progress.has-image-placeholder { overflow: hidden; }
 .image-progress img { transition: opacity .85s cubic-bezier(.22, 1, .36, 1); }
+.image-progress.has-image-placeholder img { transition: none; }
 .image-progress.is-loading img:not(.is-image-loaded) { opacity: 0; }
-.image-progress > img { z-index: 2; }
+.image-progress > img { z-index: 1; }
 .image-progress:not(.category-tile) > img { position: relative; }
-.image-progress > a { position: relative; z-index: 2; }
-.image-progress > a > img { position: relative; }
-.image-loader { position: absolute; z-index: 1; top: 50%; left: 50%; margin: -15px 0 0 -15px; }
+.image-progress > a { position: relative; z-index: 1; }
+.image-progress > a > img { position: relative; z-index: 1; }
+.image-placeholder {
+	position: absolute;
+	z-index: 2;
+	inset: -12%;
+	background-image:
+		linear-gradient(color-mix(in srgb, var(--card-background) 18%, transparent), color-mix(in srgb, var(--card-background) 18%, transparent)),
+		var(--image-placeholder);
+	background-size: cover;
+	background-position: center;
+	filter: blur(16px) saturate(.88);
+	transform: scale(1.08);
+	opacity: 1;
+	transition: opacity .62s cubic-bezier(.22, 1, .36, 1);
+	pointer-events: none;
+}
+.image-progress.is-placeholder-fading .image-placeholder { opacity: 0; }
+.image-progress.is-placeholder-hidden .image-placeholder { visibility: hidden; }
+.image-loader { position: absolute; z-index: 4; top: 50%; left: 50%; margin: -15px 0 0 -15px; }
 .image-progress:not(.is-loading) .image-loader,
 .image-progress:not(.is-loading) .category-loader,
 .image-progress:not(.is-loading) .lightbox-loader { opacity: 0; }
@@ -222,6 +241,10 @@
 	-webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, .15) 40%, #000 75%);
 	mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, .15) 40%, #000 75%);
 }
+.article-list article.is-cover-background .article-image .image-placeholder {
+	-webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, .15) 40%, #000 75%);
+	mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, .15) 40%, #000 75%);
+}
 .article-list article.is-cover-background .article-image .image-loader { right: 20%; left: auto; }
 .article-list article.is-cover-background .article-details { position: relative; z-index: 1; width: 65%; }
 
@@ -250,6 +273,10 @@
 	border-radius: 0;
 	object-fit: cover;
 	object-position: center;
+	-webkit-mask-image: linear-gradient(to right, transparent 33.333%, #000 66.667%);
+	mask-image: linear-gradient(to right, transparent 33.333%, #000 66.667%);
+}
+.article-list--compact article.is-archive-cover-background > .article-image .image-placeholder {
 	-webkit-mask-image: linear-gradient(to right, transparent 33.333%, #000 66.667%);
 	mask-image: linear-gradient(to right, transparent 33.333%, #000 66.667%);
 }
