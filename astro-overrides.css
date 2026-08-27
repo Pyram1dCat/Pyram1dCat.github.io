@@ -15,6 +15,9 @@
 	--floating-control-bottom: 14px;
 }
 
+:root[data-scheme='light'] { color-scheme: light; }
+:root[data-scheme='dark'] { color-scheme: dark; }
+
 .icon-mask {
 	display: inline-block;
 	width: 20px;
@@ -296,6 +299,7 @@
 	box-shadow: none;
 	padding: var(--card-padding);
 }
+.comments-card .twikoo { color: var(--card-text-color-main); }
 .comments-card.is-comments-loading #twikoo { visibility: hidden; }
 .comments-card .section-title { margin-bottom: 20px; }
 .post-navigation {
