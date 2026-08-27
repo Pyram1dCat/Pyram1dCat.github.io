@@ -232,7 +232,6 @@
 .article-list article.is-cover-background { position: relative; isolation: isolate; }
 .article-list article.is-cover-background > .article-header { position: relative; display: flex; align-items: stretch; }
 .article-list article.is-cover-background .article-image { position: absolute; z-index: 0; inset: 0; }
-.article-list article.is-cover-background .article-image a { display: block; width: 100%; height: 100%; }
 .article-list article.is-cover-background .article-image img {
 	width: 100%;
 	height: 100%;
