@@ -419,6 +419,7 @@
 	line-height: 1.4;
 	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 2;
+	line-clamp: 2;
 	transition: color .2s ease-out, background-color .2s ease-out;
 }
 .widget--toc #toc-list .toc-level-2 > a {
