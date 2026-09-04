@@ -1445,7 +1445,8 @@ template {
 .article-translations {
   display: flex;
   color: var(--card-text-color-tertiary);
-  gap: 15px
+  row-gap: 5px;
+  column-gap: 15px;
 }
 
 .article-time svg,
@@ -1469,7 +1470,8 @@ template {
 .article-translations>div {
   display: inline-flex;
   align-items: center;
-  gap: 15px
+  row-gap: 5px;
+  column-gap: 15px;
 }
 
 .article-time {
