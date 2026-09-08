@@ -492,6 +492,7 @@
 .article-content h2,
 .article-content h3,
 .article-content h4 { scroll-margin-top: 20px; }
+.article-content :is(strong, b) { font-weight: 900; }
 .article-content .main-article-text { display: block; text-indent: 2em; }
 .article-content .site-note {
 	display: block;
