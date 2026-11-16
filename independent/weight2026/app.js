@@ -5,12 +5,14 @@ const colors = ['#41765e', '#b07255'];
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 const state = { records: [], headers: [], left: DEFAULT_METRICS[0], right: DEFAULT_METRICS[1], selected: [...DEFAULT_METRICS], mode: 'all', days: 7, start: 0, end: 0, span: 0, points: [], active: -1, pinned: false };
 let plot = null, renderTimer, hideTimer, resizeTimer, summaryTimer, rangeUI = null;
+// 触屏滑动查看时暂停淡入动画：每个数据点都重启 220 ms 动画会闪。
+let scrubbing = false;
 const detailFields = new Map();
 const escapeHTML = value => String(value).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const number = value => value === null || value === undefined ? '—' : Number(value.toFixed(2)).toLocaleString('zh-CN', { maximumFractionDigits: 2 });
 const signed = value => `${value > 0 ? '+' : ''}${number(value)}`;
 function fade(element) {
-  if (!reducedMotion.matches) {
+  if (!scrubbing && !reducedMotion.matches) {
     element.getAnimations().forEach(animation => animation.cancel());
     element.animate([{ opacity: .25 }, { opacity: 1 }], { duration: 220, easing: 'ease-out' });
   }
@@ -364,6 +366,17 @@ function pointAt(event) {
   }));
   return best;
 }
+// 触屏滑动时按横坐标找最近的数据点，手指不必正好落在圆点上。
+function nearestIndex(event) {
+  if (!plot || !state.points.length) return -1;
+  const px = event.clientX - $('chart').getBoundingClientRect().left;
+  let best = -1, distance = Infinity;
+  state.points.forEach((point, index) => {
+    const gap = Math.abs(plot.x(point.time) - px);
+    if (gap < distance) { distance = gap; best = index; }
+  });
+  return best;
+}
 function showDetail(index) {
   clearTimeout(hideTimer); hideTimer = null;
   const point = state.points[index];
@@ -408,16 +421,48 @@ function initChartEvents() {
     clearTimeout(summaryTimer);
     summaryTimer = setTimeout(fitSummary, 120);
   });
-  $('chart').addEventListener('pointermove', event => {
-    if (event.pointerType !== 'mouse' || state.pinned) return;
-    const index = pointAt(event);
-    if (index >= 0) showDetail(index);
-    else if (!hideTimer) hideTimer = setTimeout(() => { hideTimer = null; closeDetail(); }, 150);
+  // 触屏滑动查看：横向拖动超过阈值后接管手势，按横向位置逐点更新卡片。
+  let scrub = null, suppressClick = false;
+  const endScrub = event => {
+    if (!scrub || (event && event.pointerId !== scrub.id)) return;
+    if (scrub.moved) suppressClick = true;
+    if (event && $('chart').hasPointerCapture(event.pointerId)) $('chart').releasePointerCapture(event.pointerId);
+    scrub = null;
+    scrubbing = false;
+  };
+  $('chart').addEventListener('pointerdown', event => {
+    suppressClick = false;
+    if (event.pointerType === 'mouse' || !event.isPrimary || !state.points.length) return;
+    scrub = { id: event.pointerId, x: event.clientX, y: event.clientY, moved: false };
   });
+  $('chart').addEventListener('pointermove', event => {
+    if (event.pointerType === 'mouse') {
+      if (state.pinned) return;
+      const index = pointAt(event);
+      if (index >= 0) showDetail(index);
+      else if (!hideTimer) hideTimer = setTimeout(() => { hideTimer = null; closeDetail(); }, 150);
+      return;
+    }
+    if (!scrub || scrub.id !== event.pointerId) return;
+    if (!scrub.moved) {
+      const dx = event.clientX - scrub.x, dy = event.clientY - scrub.y;
+      // 主要横向移动才进入滑动查看，竖向手势留给页面滚动。
+      if (Math.abs(dx) < 6 || Math.abs(dx) <= Math.abs(dy)) return;
+      scrub.moved = true;
+      scrubbing = true;
+      state.pinned = true;
+      $('chart').setPointerCapture(event.pointerId);
+    }
+    const index = nearestIndex(event);
+    if (index >= 0) showDetail(index);
+  });
+  $('chart').addEventListener('pointerup', endScrub);
+  $('chart').addEventListener('pointercancel', endScrub);
   $('chart').addEventListener('pointerleave', () => {
     if (!state.pinned) { clearTimeout(hideTimer); hideTimer = setTimeout(closeDetail, 220); }
   });
   $('chart').addEventListener('click', event => {
+    if (suppressClick) { suppressClick = false; return; }
     const index = pointAt(event);
     if (index < 0) { closeDetail(); return; }
     if (state.pinned && state.active === index) closeDetail();
@@ -427,7 +472,10 @@ function initChartEvents() {
   document.addEventListener('pointerdown', event => {
     if (event.button > 0 || !$('detail').classList.contains('open')) return;
     if (event.target.closest('#detail')) return;
-    if ($('chart').contains(event.target) && pointAt(event) >= 0) return;
+    if ($('chart').contains(event.target)) {
+      // 触屏按在图表上可能是滑动查看的开始，先别收起；轻点空白仍由图表的 click 收起。
+      if (event.pointerType !== 'mouse' || pointAt(event) >= 0) return;
+    }
     closeDetail();
   });
   $('detail').addEventListener('pointerenter', () => { clearTimeout(hideTimer); hideTimer = null; });
