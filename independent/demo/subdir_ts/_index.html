@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>独立网页 · 访问测试 · subdir_ts</title>
+    <style>
+      :root { color-scheme: light; font-family: system-ui, -apple-system, "PingFang SC", sans-serif; color: #172b38; background: #eff4f3; }
+      * { box-sizing: border-box; }
+      body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px; }
+      main { width: min(100%, 680px); padding: clamp(24px, 6vw, 52px); background: #fff; border: 1px solid #d9e5e0; border-radius: 24px; box-shadow: 0 20px 70px #173e2910; }
+      .badge { display: inline-block; margin: 0 0 24px; padding: 7px 12px; border-radius: 99px; background: #e7f5ed; color: #216747; font-size: 14px; font-weight: 600; }
+      h1 { margin: 0 0 16px; font-size: clamp(28px, 6vw, 40px); letter-spacing: -.04em; }
+      p { line-height: 1.8; color: #52636e; }
+      dl { margin: 28px 0; padding: 20px; background: #f5f8f7; border-radius: 12px; }
+      dt { margin-top: 16px; font-size: 13px; color: #52636e; }
+      dt:first-child { margin-top: 0; }
+      dd { margin: 6px 0 0; overflow-wrap: anywhere; font-size: 14px; line-height: 1.7; }
+      code { font-family: ui-monospace, monospace; }
+      button { border: 0; border-radius: 10px; padding: 13px 20px; background: #216747; color: white; font: inherit; cursor: pointer; }
+      button:hover { background: #174e35; }
+      button:focus-visible, a:focus-visible { outline: 3px solid #b77c18; outline-offset: 4px; }
+      #result { min-height: 1.8em; }
+      footer { margin-top: 28px; padding-top: 20px; border-top: 1px solid #e2e9e6; font-size: 14px; }
+      a { color: #216747; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="badge">HTML 已加载</p>
+      <h1>独立网页，访问成功。</h1>
+      <p>这是一个包含 HTML、CSS 和 JavaScript 的单文件页面。如果你看到了绿色按钮和白色卡片，内联 CSS 已正常加载。</p>
+      <dl>
+        <dt>文件位置</dt>
+        <dd><code>public/independent/demo/index.html</code></dd>
+        <dt>当前访问地址</dt>
+        <dd id="address">等待 JavaScript 读取…</dd>
+        <dt>JavaScript 状态</dt>
+        <dd id="script-status">尚未执行</dd>
+      </dl>
+      <button id="test-button" type="button">测试 JavaScript</button>
+      <p id="result" role="status" aria-live="polite">点击按钮，检查交互是否正常。</p>
+      <noscript><p>浏览器已禁用 JavaScript。HTML 与 CSS 仍可独立显示。</p></noscript>
+      <footer>
+        <p>目录访问路径：<a href="/independent/demo/">/independent/demo/</a>，也支持完整的 <code>index.html</code> 路径。</p>
+        <a href="/">返回博客首页</a>
+      </footer>
+    </main>
+    <script>
+      document.getElementById('address').textContent = window.location.href;
+      document.getElementById('script-status').textContent = '已执行 · 无外部依赖';
+      let clicks = 0;
+      document.getElementById('test-button').addEventListener('click', () => {
+        clicks += 1;
+        document.getElementById('result').textContent = `交互正常，已点击 ${clicks} 次。`;
+      });
+    </script>
+  </body>
+</html>

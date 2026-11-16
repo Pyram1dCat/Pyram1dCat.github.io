@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f7f8f4">
+  <!-- <meta name="description" content="从每一次测量，看见长期变化。体重与身体成分的个人数据记录。"> -->
+  <title>减肥记录 2026</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+
+<body>
+  <main class="page">
+    <header class="header">
+      <div>
+        <!-- <p class="eyebrow">
+        <span class="brand-mark" aria-hidden="true"></span>
+        2026/05/20 - 2026/11/17
+        </p> -->
+        <h1>2026 年减肥记录
+          <!-- <span class="title-dot">.</span> -->
+        </h1>
+        <p class="intro">男，26 岁</p>
+      </div>
+      <a class="download" href="./raw_data.csv" download="减重原始数据.csv"><svg aria-hidden="true" viewBox="0 0 20 20">
+          <path d="M10 2v10m-4-4 4 4 4-4M3 13v4h14v-4" />
+        </svg>下载原始 CSV</a>
+    </header>
+    <div id="load-status" class="load-status" role="status">正在读取测量记录…</div>
+    <noscript>
+      <p class="load-status">请启用 JavaScript 以查看交互图表，也可以直接下载上方的原始 CSV。</p>
+    </noscript>
+    <div id="dashboard" hidden>
+      <section class="summary" aria-label="减重概览">
+        <div class="summary-lead">
+          <span class="small-label">记录范围</span>
+          <p class="summary-date">
+            <strong id="record-span"></strong>
+          </p>
+          <span id="record-count" class="muted"></span>
+        </div>
+        <div class="stat"><span class="small-label">体重变化</span>
+          <p class="stat-value">
+            <strong id="weight-change">—</strong><span class="unit">kg</span>
+          </p>
+        </div>
+        <div class="stat"><span class="small-label">体脂率变化</span>
+          <p class="stat-value">
+            <strong id="fat-change">—</strong><span class="unit">%</span>
+          </p>
+        </div>
+      </section>
+      <section class="chart-card" aria-labelledby="chart-heading">
+        <div class="chart-heading">
+          <div>
+            <!-- <p class="eyebrow">THE LONG VIEW</p> -->
+            <h2 id="chart-heading">变化趋势</h2>
+          </div>
+          <div id="legend" class="legend" aria-label="图表指标"></div>
+        </div>
+        <div class="chart-meta"><span id="chart-description" aria-live="polite"></span><button id="reset"
+            class="text-button" type="button">重置视图 <span aria-hidden="true">↺</span></button></div>
+        <div id="chart" class="chart" tabindex="0" role="group" aria-label="测量趋势图。使用左右方向键查看数据点，Escape 关闭详情。"></div>
+        <div class="chart-help"><span><span class="help-dot"
+              aria-hidden="true"></span>悬停或轻点圆点，查看完整记录</span><span>左右方向键也可浏览</span></div>
+        <div class="range-section">
+          <div class="control-heading">
+            <h3>时间范围</h3><span id="range-label"></span>
+          </div>
+          <div id="range-slider" class="range-slider">
+            <div class="range-track" aria-hidden="true"><span class="range-fill"></span></div>
+            <div id="range-start" class="range-handle" data-handle="start" role="slider" tabindex="0"
+              aria-label="起始日期" aria-orientation="horizontal" aria-valuemin="0" aria-valuemax="0" aria-valuenow="0">
+            </div>
+            <div id="range-end" class="range-handle" data-handle="end" role="slider" tabindex="0" aria-label="结束日期"
+              aria-orientation="horizontal" aria-valuemin="0" aria-valuemax="0" aria-valuenow="0"></div>
+          </div>
+          <div class="range-values">
+            <span class="range-value">起始 <output id="start-output" for="range-start"></output></span>
+            <span class="range-value">结束 <output id="end-output" for="range-end"></output></span>
+          </div>
+        </div>
+        <div class="group-section">
+          <div class="control-heading">
+            <h3>观察尺度</h3>
+            <!-- <span>平均值，让长期趋势更清晰</span> -->
+          </div>
+          <div class="group-controls" role="group" aria-label="数据分组方式">
+            <button class="mode active" data-mode="all" aria-pressed="true" type="button">全部记录</button>
+            <button class="mode" data-mode="week" aria-pressed="false" type="button">按周平均</button>
+            <button class="mode" data-mode="month" aria-pressed="false" type="button">按月平均</button>
+            <div class="custom-group">
+              <label class="mode custom-mode" id="custom-mode"><span aria-hidden="true">按</span><input
+                  id="custom-days" type="number" min="1" max="365" step="1" value="7"
+                  aria-label="自定义平均天数"><span aria-hidden="true">天平均</span></label>
+            </div>
+          </div>
+          <p id="group-note" class="control-note" aria-live="polite"></p>
+        </div>
+        <div class="metrics-section">
+          <div class="control-heading">
+            <h3>纵轴指标</h3><span>第一项使用左轴，第二项可为无</span>
+          </div>
+          <div class="axis-controls">
+            <label class="axis-field">
+              <span class="axis-dot" aria-hidden="true" style="--series:#41765e"></span>
+              <span class="axis-name">左轴</span>
+              <select id="axis-left"></select>
+            </label>
+            <label class="axis-field">
+              <span class="axis-dot" aria-hidden="true" style="--series:#b07255"></span>
+              <span class="axis-name">右轴</span>
+              <select id="axis-right"></select>
+            </label>
+          </div>
+          <p id="metric-hint" class="control-note" aria-live="polite"></p>
+        </div>
+      </section>
+    </div>
+  </main>
+  <aside id="detail" class="detail" aria-labelledby="detail-title" aria-hidden="true" inert>
+    <div id="detail-scroll" class="detail-scroll">
+      <div class="detail-inner">
+        <div class="detail-heading">
+          <div>
+            <p id="detail-kicker" class="eyebrow">测量详情</p>
+            <h2 id="detail-title"></h2>
+            <p id="detail-subtitle"></p>
+          </div><button id="close-detail" class="close-button" type="button" aria-label="关闭数据详情">×</button>
+        </div>
+        <dl id="detail-values" class="detail-values"></dl>
+      </div>
+    </div>
+  </aside>
+</body>
+
+</html>
