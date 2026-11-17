@@ -138,6 +138,51 @@ h1 {
   border-top:1px solid var(--line);
   border-bottom:1px solid var(--line);
 }
+.about {
+  display:grid;
+  align-items:start;
+  padding-top:24px;
+  border-top:1px solid var(--line);
+}
+.about-content {
+  padding: 5px 12px;
+}
+.about-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.about h3 {
+  font-size: 16px;
+}
+.about p {
+  margin: 0;
+  font-size: 14px;
+  text-indent: 2em;
+  line-height: 1.8rem;
+}
+.about span {
+  font-size: 12px;
+}
+.about strong {
+  font-size: 16px;
+}
+.about .metrics {
+  display: grid;
+  padding: 5px 0;
+  margin: 5px;
+  grid-auto-flow: column;
+  grid-auto-columns:1fr;
+}
+.about .metrics div {
+  padding: 0 24px;
+  display: grid;
+  border-left: 1px solid var(--line);
+  font-size: 12px;
+}
+.about .metrics .metrics-end {
+  border-right: 1px solid var(--line);
+}
 .small-label {
   font-size:12px;
   color:var(--muted);
@@ -341,7 +386,7 @@ h2 {
   margin-bottom:17px;
 }
 .control-heading h3 {
-  font-size:13px;
+  font-size:16px;
   font-weight:600;
   margin:0;
   white-space:nowrap;
