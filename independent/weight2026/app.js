@@ -29,7 +29,7 @@ function initSummary() {
   const days = Math.round((dayStart(latest.time) - dayStart(first.time)) / DAY) + 1;
   $('record-count').innerHTML = `<span>${state.records.length} 次测量</span> · <span>${days} 天跨度</span>`;
   setText('weight-change', change(weight));
-  setText('fat-change', change(fat));
+  // setText('fat-change', change(fat));
 }
 // 概览固定一行三块：按可用宽度缩小数值的 strong 字号，日期放不下时换行，保证任何窗口下都完整并排显示。
 function fitSummary() {

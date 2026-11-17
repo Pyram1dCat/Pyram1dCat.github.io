@@ -131,7 +131,8 @@ h1 {
   --summary-date:16px;
   --summary-unit:13px;
   display:grid;
-  grid-template-columns:1.25fr 1fr 1fr;
+  /* grid-template-columns:1.25fr 1fr 1fr; */
+  grid-template-columns:1fr 1fr;
   align-items:start;
   margin-bottom:32px;
   padding:24px 0;
@@ -144,15 +145,16 @@ h1 {
   padding-top:24px;
   border-top:1px solid var(--line);
 }
-.about-content {
-  width: 100%;
-  padding: 5px 12px;
+.about-card {
+  margin: 16px 12px 0 12px;
+  background:none;
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding: 10px 24px 24px;
+  box-shadow:0 4px 22px #263b231f;
 }
-.about-heading {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.about h2 {
+  margin-bottom: 10px;
 }
 .about h3 {
   font-size: 16px;
@@ -165,11 +167,27 @@ h1 {
   line-height: 1.8em;
   color: var(--muted);
 }
+.about summary {
+  margin: 0;
+  font-size: 0.8em;
+  text-indent: 2em;
+  line-height: 1.8em;
+  color: var(--muted);
+}
 .about span {
   font-size: 12px;
 }
 .about strong {
   font-size: 16px;
+}
+.about .text-underline {
+  font-size: 1em;
+  text-decoration: underline;
+}
+.about .text-stress {
+  font-size: 1em;
+  font-weight: bolder;
+  text-decoration: underline;
 }
 .about .metrics {
   width: 100%;
@@ -727,7 +745,8 @@ h2 {
     --summary-value:30px;
     --summary-date:14px;
     --summary-unit:12px;
-    grid-template-columns:1.2fr 1fr 1fr;
+    /* grid-template-columns:1.2fr 1fr 1fr; */
+    grid-template-columns:1fr 1fr;
   }
   .summary .stat {
     padding-left:18px;
@@ -779,7 +798,8 @@ h2 {
     --summary-unit:10px;
     margin-bottom:22px;
     padding:20px 0;
-    grid-template-columns:1.25fr 1fr 1fr;
+    /* grid-template-columns:1.25fr 1fr 1fr; */
+    grid-template-columns:1fr 1fr;
   }
   .summary .stat {
     padding-left:12px;

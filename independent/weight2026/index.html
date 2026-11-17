@@ -46,11 +46,11 @@
             <strong id="weight-change">—</strong><span class="unit">kg</span>
           </p>
         </div>
-        <div class="stat"><span class="small-label">体脂率变化</span>
+        <!-- <div class="stat"><span class="small-label">体脂率变化</span>
           <p class="stat-value">
             <strong id="fat-change">—</strong><span class="unit">%</span>
           </p>
-        </div>
+        </div> -->
       </section>
       <section class="chart-card" aria-labelledby="chart-heading">
         <div class="chart-heading">
@@ -62,7 +62,8 @@
         </div>
         <div class="chart-meta"><span id="chart-description" aria-live="polite"></span><button id="reset"
             class="text-button" type="button">重置视图 <span aria-hidden="true">↺</span></button></div>
-        <div id="chart" class="chart" tabindex="0" role="group" aria-label="测量趋势图。使用左右方向键查看数据点，触屏可左右滑动查看，Escape 关闭详情。"></div>
+        <div id="chart" class="chart" tabindex="0" role="group" aria-label="测量趋势图。使用左右方向键查看数据点，触屏可左右滑动查看，Escape 关闭详情。">
+        </div>
         <div class="chart-help"><span><span class="help-dot"
               aria-hidden="true"></span>悬停或轻点圆点，触屏可左右滑动查看</span><span>左右方向键也可浏览</span></div>
         <div class="range-section">
@@ -71,8 +72,8 @@
           </div>
           <div id="range-slider" class="range-slider">
             <div class="range-track" aria-hidden="true"><span class="range-fill"></span></div>
-            <div id="range-start" class="range-handle" data-handle="start" role="slider" tabindex="0"
-              aria-label="起始日期" aria-orientation="horizontal" aria-valuemin="0" aria-valuemax="0" aria-valuenow="0">
+            <div id="range-start" class="range-handle" data-handle="start" role="slider" tabindex="0" aria-label="起始日期"
+              aria-orientation="horizontal" aria-valuemin="0" aria-valuemax="0" aria-valuenow="0">
             </div>
             <div id="range-end" class="range-handle" data-handle="end" role="slider" tabindex="0" aria-label="结束日期"
               aria-orientation="horizontal" aria-valuemin="0" aria-valuemax="0" aria-valuenow="0"></div>
@@ -92,9 +93,9 @@
             <button class="mode" data-mode="week" aria-pressed="false" type="button">按周平均</button>
             <button class="mode" data-mode="month" aria-pressed="false" type="button">按月平均</button>
             <div class="custom-group">
-              <label class="mode custom-mode" id="custom-mode"><span aria-hidden="true">按</span><input
-                  id="custom-days" type="number" min="1" max="365" step="1" value="7"
-                  aria-label="自定义平均天数"><span aria-hidden="true">天平均</span></label>
+              <label class="mode custom-mode" id="custom-mode"><span aria-hidden="true">按</span><input id="custom-days"
+                  type="number" min="1" max="365" step="1" value="7" aria-label="自定义平均天数"><span
+                  aria-hidden="true">天平均</span></label>
             </div>
           </div>
           <p id="group-note" class="control-note" aria-live="polite"></p>
@@ -118,99 +119,105 @@
           <p id="metric-hint" class="control-note" aria-live="polite"></p>
         </div>
       </section>
+      <!-- 指标说明 -->
       <section class="about" aria-label="about-metrics" style="margin-top: 52px;">
-        <!-- 指标说明 -->
-        <div class="about-heading"><h2>关于指标</h2>
-        <span class="intro" style="font-size: 11px;">* 数值评判仅适合个人情况</div>
-        <div class="about-content">
-          <h3>脂肪率（%）</h3>
-          <div class="about-content">
-            <p>脂肪是由大量脂肪细胞聚集而成的一种结缔组织，具有促进脂溶性维生素吸收、保护内脏器官、调节体温、供给人体热量等作用。脂肪率反映身体总体的肥胖程度，是评价肥胖的客观标准。脂肪率过低或过高，都会影响健康。</p>
-            <div class="metrics">
-              <div><strong>≤ 9.9</strong>偏低</div>
-              <div><strong>10.0-20.0</strong>标准</div>
-              <div><strong>20.1-25.0</strong>偏高</div>
-              <div class="metrics-end"><strong>≥ 25.1</strong>过高</div>
+        <h2>关于指标</h2>
+        <p>所谓“体脂秤”的数据，<span class="text-stress">只有体重是可信度高的</span>。脂肪率通过测量人体电阻反推得出，但影响因素多，绝对值并不准，只有同条件长期变化趋势勉强能用。其他指标都是图一乐。</p>
+        <details>
+          <summary><span class="text-underline">点击此处</span>可以查看体脂秤配套 App 对各指标的说明和<span class="text-underline">为我制定的</span>评判标准。</summary>
+          <div class="about-card">
+            <p style="text-indent: 0;"></p>
+            <h3>脂肪率（%）</h3>
+            <div class="about-content">
+              <p>脂肪是由大量脂肪细胞聚集而成的一种结缔组织，具有促进脂溶性维生素吸收、保护内脏器官、调节体温、供给人体热量等作用。脂肪率反映身体总体的肥胖程度，是评价肥胖的客观标准。脂肪率过低或过高，都会影响健康。
+              </p>
+              <div class="metrics">
+                <div><strong>≤ 9.9</strong>偏低</div>
+                <div><strong>10.0-20.0</strong>标准</div>
+                <div><strong>20.1-25.0</strong>偏高</div>
+                <div class="metrics-end"><strong>≥ 25.1</strong>过高</div>
+              </div>
+            </div>
+            <h3>骨骼肌量（kg）</h3>
+            <div class="about-content">
+              <p>骨骼肌附着在骨骼上，肌肉体积与重量，直接决定了人体的运动能力，并与能量代谢息息相关。为维护骨骼肌，应维持均衡饮食，保证每天蛋白质摄入量充足。有氧运动和力量训练交叉进行，每周 3~4 次有氧运动，每次
+                30 分钟左右；2~3 次力量训练。</p>
+              <div class="metrics">
+                <div><strong>≤ 24.9</strong>偏低</div>
+                <div><strong>25.0-33.8</strong>标准</div>
+                <div class="metrics-end"><strong>≥ 33.9</strong>较多</div>
+              </div>
+            </div>
+            <h3>内脏脂肪等级</h3>
+            <div class="about-content">
+              <p>内脏脂肪是指腹腔内内脏缝隙间所附带的脂肪。过高内脏脂肪造成腹部“游泳圈”，增加心血管疾病风险：过低内脏脂肪不利于内脏器官的支撑、稳定和保护。</p>
+              <div class="metrics">
+                <div><strong>≤ 4.9</strong>标准（健康）</div>
+                <div><strong>5.0-9.9</strong>标准（临界）</div>
+                <div><strong>10.0-14.9</strong>偏高</div>
+                <div class="metrics-end"><strong>≥ 15.0</strong>过高</div>
+              </div>
+            </div>
+            <h3>身体类型</h3>
+            <div class="about-content">
+              <p>根据脂肪率、骨骼肌量等指标，将人体分为九种体型（偏胖肌肉型、肥胖型、隐性肥胖型、标准肌肉型、标准型、运动不足型、肌肉发达型、偏瘦肌肉型、偏瘦型）。体型名称能够大致描述身体“外型”。</p>
+              <div style="width: 100%; margin-top: 12px; text-align: center;">
+                <img src="./static/img/body_types.png" alt="身体类型分类示意图"
+                  style="max-width: min(370px,100%); border-radius: 1vw; box-shadow:0 4px 22px #263b231f;" />
+              </div>
+            </div>
+            <h3>基础代谢率（kcal/d）</h3>
+            <div class="about-content">
+              <p>基础代谢率是指人体在清醒而且安静状态下，不受肌肉活动、环境温度、食物及精神紧张等影响时的能量代谢率。在一定范围，基础代谢率越高代表生命活动越活跃，通常男性高于女性、青年人高于老人。</p>
+              <div class="metrics">
+                <div><strong>≤ 1477.9</strong>偏低</div>
+                <div><strong>1478.0-1659.9</strong>标准</div>
+                <div class="metrics-end"><strong>≥ 1659.1</strong>较高</div>
+              </div>
+            </div>
+            <h3>水分率（%）</h3>
+            <div class="about-content">
+              <p>水分率指人体成分中水分占体重的百分比。身体水分有着输送营养成分、回收体内废物、保持体温等重要功能。应保证每天至少 1500 毫升的饮水量（白开水、淡茶、花草茶等），以维持细胞正常渗透压和体内酸碱平衡。
+              </p>
+              <div class="metrics">
+                <div><strong>≤ 47.1</strong>偏低</div>
+                <div><strong>47.2-70.0</strong>标准</div>
+                <div class="metrics-end"><strong>≥ 70.1</strong>偏高</div>
+              </div>
+            </div>
+            <h3>骨盐量（kg）</h3>
+            <div class="about-content">
+              <p>骨盐量是指骨中无机盐的含量。骨由无机盐、有机质和骨细胞组成。骨盐量与骨质疏松有显著相关性。多食用新鲜蔬果、适量晒太阳有助于钙质吸收。</p>
+              <div class="metrics">
+                <div><strong>≤ 2.54</strong>偏低</div>
+                <div><strong>2.55-3.05</strong>标准</div>
+                <div class="metrics-end"><strong>≥ 3.06</strong>较多</div>
+              </div>
+            </div>
+            <h3>蛋白质（%）</h3>
+            <div class="about-content">
+              <p>人体含蛋白质的质量。蛋白质是组成人体一切细胞、组织的重要成分。应保持均衡膳食，荤素搭配。</p>
+              <div class="metrics">
+                <div><strong>≤ 18.5</strong>偏低</div>
+                <div><strong>18.6-24.9</strong>标准</div>
+                <div class="metrics-end"><strong>≥ 25.0</strong>较高</div>
+              </div>
+            </div>
+            <h3>去脂体重（kg）</h3>
+            <div class="about-content">
+              <p>去脂体重是体重减去身体总脂肪重量后的值，表征和体内非脂肪物质的总重量。适量去脂体重对维持人体正常新陈代谢和骨关节健康具有重要意义。</p>
+              <div class="metrics">
+                <div><strong>≤ 46.2</strong>偏低</div>
+                <div><strong>46.3-62.3</strong>标准</div>
+                <div class="metrics-end"><strong>≥ 62.4</strong>较多</div>
+              </div>
+            </div>
+            <h3>身体年龄</h3>
+            <div class="about-content">
+              <p>身体年龄是根据脂肪、骨骼肌等指标综合评价身体总体健康水平在人群中的位置。身体年龄越接近青年则表征健康状况越好。</p>
             </div>
           </div>
-          <h3>骨骼肌量（kg）</h3>
-          <div class="about-content">
-            <p>骨骼肌附着在骨骼上，肌肉体积与重量，直接决定了人体的运动能力，并与能量代谢息息相关。为维护骨骼肌，应维持均衡饮食，保证每天蛋白质摄入量充足。有氧运动和力量训练交叉进行，每周 3~4 次有氧运动，每次 30 分钟左右；2~3 次力量训练。</p>
-            <div class="metrics">
-              <div><strong>≤ 24.9</strong>偏低</div>
-              <div><strong>25.0-33.8</strong>标准</div>
-              <div class="metrics-end"><strong>≥ 33.9</strong>较多</div>
-            </div>
-          </div>
-          <h3>内脏脂肪等级</h3>
-          <div class="about-content">
-            <p>内脏脂肪是指腹腔内内脏缝隙间所附带的脂肪。过高内脏脂肪造成腹部“游泳圈”，增加心血管疾病风险：过低内脏脂肪不利于内脏器官的支撑、稳定和保护。</p>
-            <div class="metrics">
-              <div><strong>≤ 4.9</strong>标准（健康）</div>
-              <div><strong>5.0-9.9</strong>标准（临界）</div>
-              <div><strong>10.0-14.9</strong>偏高</div>
-              <div class="metrics-end"><strong>≥ 15.0</strong>过高</div>
-            </div>
-          </div>
-          <h3>身体类型</h3>
-          <div class="about-content">
-            <p>根据脂肪率、骨骼肌量等指标，将人体分为九种体型（偏胖肌肉型、肥胖型、隐性肥胖型、标准肌肉型、标准型、运动不足型、肌肉发达型、偏瘦肌肉型、偏瘦型）。体型名称能够大致描述身体“外型”。</p>
-            <div 
-              style="width: 100%; margin-top: 12px; text-align: center;">
-              <img src="./static/img/body_types.png" alt="身体类型分类示意图"
-                style="max-width: min(370px,70vw); border-radius: 1vw; box-shadow:0 4px 22px #263b231f;"/>
-            </div>
-          </div>
-          <h3>基础代谢率（kcal/d）</h3>
-          <div class="about-content">
-            <p>基础代谢率是指人体在清醒而且安静状态下，不受肌肉活动、环境温度、食物及精神紧张等影响时的能量代谢率。在一定范围，基础代谢率越高代表生命活动越活跃，通常男性高于女性、青年人高于老人。</p>
-            <div class="metrics">
-              <div><strong>≤ 1477.9</strong>偏低</div>
-              <div><strong>1478.0-1659.9</strong>标准</div>
-              <div class="metrics-end"><strong>≥ 1659.1</strong>较高</div>
-            </div>
-          </div>
-          <h3>水分率（%）</h3>
-          <div class="about-content">
-            <p>水分率指人体成分中水分占体重的百分比。身体水分有着输送营养成分、回收体内废物、保持体温等重要功能。应保证每天至少 1500 毫升的饮水量（白开水、淡茶、花草茶等），以维持细胞正常渗透压和体内酸碱平衡。</p>
-            <div class="metrics">
-              <div><strong>≤ 47.1</strong>偏低</div>
-              <div><strong>47.2-70.0</strong>标准</div>
-              <div class="metrics-end"><strong>≥ 70.1</strong>偏高</div>
-            </div>
-          </div>
-          <h3>骨盐量（kg）</h3>
-          <div class="about-content">
-            <p>骨盐量是指骨中无机盐的含量。骨由无机盐、有机质和骨细胞组成。骨盐量与骨质疏松有显著相关性。多食用新鲜蔬果、适量晒太阳有助于钙质吸收。</p>
-            <div class="metrics">
-              <div><strong>≤ 2.54</strong>偏低</div>
-              <div><strong>2.55-3.05</strong>标准</div>
-              <div class="metrics-end"><strong>≥ 3.06</strong>较多</div>
-            </div>
-          </div>
-          <h3>蛋白质（%）</h3>
-          <div class="about-content">
-            <p>人体含蛋白质的质量。蛋白质是组成人体一切细胞、组织的重要成分。应保持均衡膳食，荤素搭配。</p>
-            <div class="metrics">
-              <div><strong>≤ 18.5</strong>偏低</div>
-              <div><strong>18.6-24.9</strong>标准</div>
-              <div class="metrics-end"><strong>≥ 25.0</strong>较高</div>
-            </div>
-          </div>
-          <h3>去脂体重（kg）</h3>
-          <div class="about-content">
-            <p>去脂体重是体重减去身体总脂肪重量后的值，表征和体内非脂肪物质的总重量。适量去脂体重对维持人体正常新陈代谢和骨关节健康具有重要意义。</p>
-            <div class="metrics">
-              <div><strong>≤ 46.2</strong>偏低</div>
-              <div><strong>46.3-62.3</strong>标准</div>
-              <div class="metrics-end"><strong>≥ 62.4</strong>较多</div>
-            </div>
-          </div>
-          <h3>身体年龄</h3>
-          <div class="about-content">
-            <p>身体年龄是根据脂肪、骨骼肌等指标综合评价身体总体健康水平在人群中的位置。身体年龄越接近青年则表征健康状况越好。</p>
-          </div>
-        </div>
+        </details>
       </section>
     </div>
   </main>
