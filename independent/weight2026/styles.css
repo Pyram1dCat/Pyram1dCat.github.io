@@ -139,27 +139,31 @@ h1 {
   border-bottom:1px solid var(--line);
 }
 .about {
-  display:grid;
+  display:block;
   align-items:start;
   padding-top:24px;
   border-top:1px solid var(--line);
 }
 .about-content {
+  width: 100%;
   padding: 5px 12px;
 }
 .about-heading {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .about h3 {
   font-size: 16px;
+  margin-bottom: 5px;
 }
 .about p {
   margin: 0;
-  font-size: 14px;
+  font-size: 0.8em;
   text-indent: 2em;
-  line-height: 1.8rem;
+  line-height: 1.8em;
+  color: var(--muted);
 }
 .about span {
   font-size: 12px;
@@ -168,15 +172,15 @@ h1 {
   font-size: 16px;
 }
 .about .metrics {
+  width: 100%;
   display: grid;
-  padding: 5px 0;
-  margin: 5px;
+  padding: 15px 0 0 0;
   grid-auto-flow: column;
   grid-auto-columns:1fr;
 }
 .about .metrics div {
-  padding: 0 24px;
   display: grid;
+  padding: 0 5px;
   border-left: 1px solid var(--line);
   font-size: 12px;
 }
