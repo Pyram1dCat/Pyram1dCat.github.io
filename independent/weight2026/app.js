@@ -23,7 +23,7 @@ function setText(id, value) {
 }
 function initSummary() {
   const first = state.records[0], latest = state.records.at(-1);
-  const [weight, fat] = DEFAULT_METRICS;
+  const [weight, _] = DEFAULT_METRICS;
   const change = key => first.values[key] !== null && latest.values[key] !== null ? signed(latest.values[key] - first.values[key]) : '—';
   setText('record-span', `${dateLabel(first.time)} — ${dateLabel(latest.time)}`);
   const days = Math.round((dayStart(latest.time) - dayStart(first.time)) / DAY) + 1;
