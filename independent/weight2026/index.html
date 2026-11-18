@@ -24,9 +24,9 @@
         </h1>
         <p class="intro">男，25 岁</p>
       </div>
-      <a class="download" href="./raw_data.csv" download="体重秤原始数据.csv"><svg aria-hidden="true" viewBox="0 0 20 20">
+      <a class="download" href="./raw_data.csv" download="体重秤数据记录.csv"><svg aria-hidden="true" viewBox="0 0 20 20">
           <path d="M10 2v10m-4-4 4 4 4-4M3 13v4h14v-4" />
-        </svg>下载原始 CSV</a>
+        </svg>体重秤记录</a>
     </header>
     <div id="load-status" class="load-status" role="status">正在读取测量记录…</div>
     <noscript>
@@ -46,11 +46,12 @@
             <strong id="weight-change">—</strong><span class="unit">kg</span>
           </p>
         </div>
-        <!-- <div class="stat"><span class="small-label">体脂率变化</span>
+        <div class="stat"><span class="small-label">最后体脂率</span>
           <p class="stat-value">
-            <strong id="fat-change">—</strong><span class="unit">%</span>
+            <strong id="fat-dxa">—</strong><span class="unit">%</span>
           </p>
-        </div> -->
+          <a id="fat-dxa-file" class="soft-muted" href="./static/file/DXA.pdf" target="_blank">DXA 报告</a>
+        </div>
       </section>
       <section class="chart-card" aria-labelledby="chart-heading">
         <div class="chart-heading">
