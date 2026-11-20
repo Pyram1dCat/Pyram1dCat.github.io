@@ -709,6 +709,7 @@ h2 {
   line-height:1;
   color:var(--muted);
   flex-shrink:0;
+  text-align: center;
 }
 .close-button:hover {
   background:var(--soft);
